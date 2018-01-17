@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--APP-->
+    <dimen name="progress_bar_height">10dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_vertical_margin_2">2dp</dimen>
+    <dimen name="activity_vertical_margin_4">4dp</dimen>
+    <dimen name="activity_vertical_margin_6">6dp</dimen>
+    <dimen name="activity_vertical_margin_8">8dp</dimen>
+    <dimen name="activity_vertical_margin_10">10dp</dimen>
+    <dimen name="activity_vertical_margin_12">12dp</dimen>
+    <dimen name="activity_vertical_margin_14">14dp</dimen>
+    <dimen name="activity_vertical_margin_16">16dp</dimen>
+    <dimen name="activity_vertical_margin_18">18dp</dimen>
+    <dimen name="activity_vertical_margin_20">20dp</dimen>
+    <dimen name="activity_vertical_margin_24">24dp</dimen>
+    <dimen name="activity_vertical_margin_28">28dp</dimen>
+    <dimen name="activity_vertical_margin_30">30dp</dimen>
+    <dimen name="activity_vertical_margin_32">32dp</dimen>
+    <dimen name="activity_vertical_margin_34">34dp</dimen>
+    <dimen name="activity_vertical_margin_36">36dp</dimen>
+    <dimen name="activity_vertical_margin_40">40dp</dimen>
+    <dimen name="activity_vertical_margin_44">44dp</dimen>
+    <dimen name="activity_vertical_margin_50">50dp</dimen>
+    <dimen name="activity_vertical_margin_52">52dp</dimen>
+    <dimen name="activity_vertical_margin_62">62dp</dimen>
+    <dimen name="activity_vertical_margin_72">72dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin_4">4dp</dimen>
+    <dimen name="activity_horizontal_margin_6">6dp</dimen>
+    <dimen name="activity_horizontal_margin_8">8dp</dimen>
+    <dimen name="activity_horizontal_margin_10">10dp</dimen>
+    <dimen name="activity_horizontal_margin_14">14dp</dimen>
+    <dimen name="activity_horizontal_margin_16">16dp</dimen>
+    <dimen name="activity_horizontal_margin_18">18dp</dimen>
+    <dimen name="activity_horizontal_margin_20">20dp</dimen>
+    <dimen name="activity_horizontal_margin_24">24dp</dimen>
+    <dimen name="activity_horizontal_margin_26">26dp</dimen>
+    <dimen name="activity_horizontal_margin_30">30dp</dimen>
+    <dimen name="activity_horizontal_margin_32">32dp</dimen>
+    <dimen name="activity_horizontal_margin_36">36dp</dimen>
+    <dimen name="activity_horizontal_margin_60">60dp</dimen>
+    <dimen name="activity_horizontal_margin_72">72dp</dimen>
+
+
+    <dimen name="progress_bar_margin_top">40dp</dimen>
+
+    <dimen name="bottom_screen_height">50dp</dimen>
+
+
+    <!-- Default size. -->
+    <dimen name="default_icon_size">20dp</dimen>
+    <dimen name="button_height_40">40dp</dimen>
+
+    <dimen name="two_line_text_view_with_left_icon">72dp</dimen>
+
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="button_margin_horizontal">10dp</dimen>
+
+    <!--text sizes-->
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+    <dimen name="text_24sp">24sp</dimen>
+    <dimen name="text_28sp">28sp</dimen>
+    <dimen name="text_34sp">34sp</dimen>
+    <dimen name="text_58sp">58sp</dimen>
+
+    <!--Material_edit_text-->
+    <dimen name="met_base_margin_horizontal">44dp</dimen>
+    <dimen name="met_icon_padding">18dp</dimen>
+    <dimen name="met_label_padding">4dp</dimen>
+
+    <dimen name="met_profile_margin_left">12dp</dimen>
+    <dimen name="met_profile_margin_right">16dp</dimen>
+
+    <!--Avatar View-->
+    <dimen name="avatar_view_avatar_margin_top">32dp</dimen>
+    <dimen name="avatar_view_arrow_margin_top">10dp</dimen>
+    <dimen name="avatar_view_under_camera_text_margin_top">6dp</dimen>
+    <dimen name="avatar_view_avatar_size">80dp</dimen>
+    <dimen name="bottom_switcher_item_padding_vertical">16dp</dimen>
+    <dimen name="avatar_view_avatar_preview_size">64dp</dimen>
+
+    <!--Select person-->
+    <dimen name="select_person_item_size">56dp</dimen>
+    <dimen name="select_person_icon_size">40dp</dimen>
+
+    <!--Calendar-->
+    <dimen name="weekly_calendar_selector_circle_size">32dp</dimen>
+    <dimen name="weekly_calendar_schedule_small_point_size">2dp</dimen>
+    <dimen name="weekly_calendar_schedule_big_point_size">8dp</dimen>
+    <dimen name="weekly_calendar_schedule_padding_point_size">2dp</dimen>
+    <dimen name="weekly_calendar_schedule_container_point_size">8dp</dimen>
+
+    <dimen name="calendar_view_pager_height">330dp</dimen>
+
+    <!--Group Spinner-->
+    <dimen name="spinner_dropdown_avatar_size">32dp</dimen>
+
+    <!--View Child-->
+    <dimen name="view_child_item_group_avatar_size">36dp</dimen>
+
+    <!--Events-->
+    <dimen name="events_view_holder_image_height">170dp</dimen>
+    <dimen name = "events_view_holder_group_avatar_size">24dp</dimen>
+
+    <!--Family Screen-->
+    <dimen name="family_card_padding">8dp</dimen>
+    <dimen name="family_card_position_margin_top">4dp</dimen>
+    <dimen name="family_card_status_padding_left">10dp</dimen>
+    <dimen name="family_card_status_padding_right">10dp</dimen>
+    <dimen name="family_card_status_padding_vertical">2dp</dimen>
+
+    <!--Chats Screens-->
+    <dimen name="select_member_dialog_avatar_size">40dp</dimen>
+
+    <!--Feed Screen-->
+    <dimen name="feed_item_title_width">220dp</dimen>
+    <dimen name="content_padding_bottom">112dp</dimen>
+
+
+</resources>

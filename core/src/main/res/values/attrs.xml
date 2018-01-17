@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarView">
+        <attr name="show_under_avatar" format="boolean"/>
+        <attr name="av_background" format="reference"/>
+        <attr name="required" format="boolean"/>
+        <attr name="child_holder" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineTextViewWithIcon">
+        <attr name="left_icon" format="boolean"/>
+        <attr name="main_text" format="string" localization="suggested"/>
+        <attr name="secondary_text" format="string" localization="suggested"/>
+        <attr name="right_arrow" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundLayout">
+        <attr name="FIV_foreground" format="reference|color"/>
+        <attr name="FIV_foregroundInsidePadding" format="boolean"/>
+        <attr name="FIV_backgroundAsForeground" format="boolean"/>
+
+    </declare-styleable>
+</resources>

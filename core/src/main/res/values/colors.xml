@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#4c67f3</color>
+    <color name="colorAccent">@color/apple_green</color>
+
+    <color name="apple_green_two">#74c126</color>
+    <color name="colorPrimaryDarkOrange">#6bb223</color>
+    <color name="colorAccentBlue">#5473ff</color>
+
+    <color name="error_color">#FFDD2C00</color>
+
+    <color name="separator_grey">#e4e4e4</color>
+
+    <color name="transparent_white">#7FFFFFFF</color>
+
+    <color name="gray_background">#F1F5F7</color>
+
+
+    <!--Bottom navigator-->
+    <color name="bottom_navigator_background">@color/dark</color>
+    <color name="bottom_navigator_selected">@color/dark_two</color>
+
+    <!--text colors-->
+    <color name="dark_grey_blue">#33485a</color>
+    <color name="lighnt_grey_blue">#7daad0</color>
+    <color name="bluish_grey_46">#758695a1</color>
+    <color name="bluish_grey">#8795a2</color>
+    <color name="blue_grey">#8ca6bd</color>
+    <color name="greyish_brown">#505050</color>
+    <color name="cool_grey">#8795a2</color>
+    <color name="periwinkle_blue">#7d93fa</color>
+
+    <color name="toolbar_color_blue">@color/lightish_blue_two</color>
+    <color name="toolbar_color_blue_with_transparent">#C4CFFD</color>
+
+    <color name="load_smoke_color">#55000000</color>
+
+    <!--ENTER-->
+    <color name="enter_background">#526eff</color>
+    <color name="enterPrimaryTextColor">@android:color/black</color>
+
+    <!--check in-->
+    <color name="check_in_bg_blue">#F1F5F7</color>
+
+    <!--Avatar View-->
+    <color name="avatar_view_under_camera_text">#5473ff</color>
+
+    <!--Calendar-->
+    <color name="text_calendar_inactive_color">#000000</color>
+    <color name="text_calendar_active_color">#FFFFFF</color>
+    <color name="weekly_calendar_schedule_point_white">#80ffffff</color>
+    <color name="weekly_calendar_schedule_point_green">@color/yelow_orange</color>
+    <color name="weekly_calendar_schedule_point_red">#ff4b4b</color>
+
+    <color name="black_38">#61000000</color>
+    <color name="apple_green">#6ebd1e</color>
+    <color name="apple_green_transparent">#C2EB98</color>
+    <color name="edit_text_error">#f56b5c</color>
+
+
+    <color name="dark">#1a1c25</color>
+    <color name="dark_two">#111219</color>
+    <color name="lightish_blue">#5473ff</color>
+    <color name="white_two">#e4e4e4</color>
+    <color name="white_three">#fafafa</color>
+    <color name="lightish_blue_two">#5677fc</color>
+    <color name="under_card_background">#F1F5F7</color>
+    <color name="white_four">#e0e0e0</color>
+    <color name="coral">#f56b5c</color>
+    <color name="pale_red">#e24736</color>
+    <color name="opacity_red">#f9a69d</color>
+    <color name="pale_gray">#f1f5f7</color>
+    <color name="yelow_orange">#ffb200</color>
+    <color name="pale_lilac">#e5e9ff</color>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="@dimen/two_line_text_view_with_left_icon"
+        android:layout_height="@dimen/two_line_text_view_with_left_icon">
+
+        <ImageView
+            android:id="@+id/two_line_text_view_with_left_icon_icon"
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/two_line_text_view_with_left_icon_main_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/text_16sp" />
+
+        <TextView
+            android:id="@+id/two_line_text_view_with_left_icon_secondary_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bluish_grey"
+            android:textSize="@dimen/text_12sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="@dimen/two_line_text_view_with_left_icon"
+        android:layout_height="@dimen/two_line_text_view_with_left_icon"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_26">
+
+        <ImageView
+            android:id="@+id/two_line_text_view_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/ic_angle_right" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">Kidy View</string>
+    <string name="feed_screen_name">Feed</string>
+    <string name="children_screen_title">Children</string>
+
+    <!--Start Screen-->
+    <string name="start_screen_name">Start</string>
+    <string name="start_screen_login_button">Login</string>
+    <string name="start_screen_or">or</string>
+    <string name="start_screen_registration_button">Registration</string>
+    <string name="start_screen_code_button">I have a school code</string>
+    <string name="start_screen_welcome_text_first">KidyView helps parents, schools and teachers stay connected all day. It\'s an easy way to follow the progress of our precious little ones.\n\nIf your school is in the program and this is your first time, click on \"I have a school code\" to register. If you want to use KidyView for individual purposes, click on \"Register\" to begin.
+    </string>
+    <string name="start_screen_welcome_text_second">then click \"I have a school code\". If you are not associated with any school and to use the app is your own decision please use \"Registration\". If you already use the app please Login.</string>
+
+
+    <!--Code Screen-->
+    <string name="code_send_again">Send the code again</string>
+    <string name="code_if_need_code">If you need a new code</string>
+    <string name="code_login">Login</string>
+
+
+    <!--поправила-->
+    <string name="code_code_error">Incorrect code</string>
+
+    <!--Login Screen-->
+    <string name="login_forgot_password">Forgot your password?</string>
+    <string name="login">Login</string>
+
+    <!--Registration Screen-->
+    <string name="registration_button_text">Registration</string>
+    <string name="welcome_text">To continue you need to fill out your profile</string>
+    <string name="welcome_button_text">Create your profile</string>
+
+
+    <!--Profile-->
+    <string name="profile_title">Profile</string>
+    <string name="profile_school_info">School Information</string>
+
+
+    <!--Edit Profile-->
+    <string name="create_profile_title">Create Profile</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="edit_profile_school_info">School Information</string>
+    <string name="edit_profile_under_camera_text">Click to choose the photo</string>
+    <string name="edit_profile_field_empty_error">All fields must be filled</string>
+    <string name="edit_profile_email_error">Check email address</string>
+    <string name="edit_profile_additional_phone_length_error">Phone length must be more that 2 numbers</string>
+
+    <!--Login Screen-->
+    <string name="login_empty_password">Check your password</string>
+
+
+    <!--Children screen-->
+    <string name="children_empty_text">Children and Parents profiles\n+ to add a new parent or child</string>
+    <string name="children_add_child">Add a child</string>
+
+
+    <string name="children_age_and_gender_format">%1$s %2$d year old</string>
+    <string name="children_delete_format">Are you sure you want to delete %1$s from your group?</string>
+
+    <!--Settings-->
+    <string name="settings_title">Settings</string>
+    <string name="settings_edit_groups">Edit groups:</string>
+    <string name="settings_change_password">Change password</string>
+    <string name="settings_log_out">Log out</string>
+
+    <!--EditGroup-->
+    <string name="edit_group_title">Edit Group</string>
+    <string name="edit_group_name">Name Group</string>
+    <!--поправила-->
+    <string name="add_child_gender_warning">Check the gender of parentChild</string>
+
+    <!--ChangePassword-->
+    <string name="change_password_title">Change password</string>
+    <string name="change_password_old">Old Password</string>
+    <string name="change_password_new">New Password</string>
+    <string name="change_password_repeat">Repeat Password</string>
+    <string name="change_password_forgot">Forgot your password?</string>
+    <string name="change_password_old_incorrect">The old password is incorrect</string>
+
+    <!--View Child Screen-->
+    <string name="view_child_messages_button">messages</string>
+    <string name="view_child_call_button">parents</string>
+    <string name="view_child_activity_button">add activity</string>
+    <string name="view_child_invite_family">Invite Family</string>
+    <string name="view_child_blood_group_format">BloodGroup: %s</string>
+    <string name="view_child_genotype_format">Genotype: %s</string>
+    <string name="child_boy">Boy</string>
+    <string name="child_girl">Girl</string>
+    <string name="view_child_age_and_gender_format">%1$s %2$d year old</string>
+
+    <string name="view_child_family_count_format">Family (%1$d people)</string>
+    <string name="view_child_family_new_member">New family member</string>
+    <string name="view_child_no_family">Family (0 people)</string>
+    <!--<string name="view_child_empty_info_field">is not filled</string>-->
+    <string name="view_child_empty_blood_group">Blood group</string>
+    <string name="view_child_empty_genotype">Genotype</string>
+    <string name="view_child_empty_allergies">Allergies</string>
+    <string name="view_child_empty_additional">Information</string>
+
+
+    <!--Family Screen-->
+    <string name="family_title">Family</string>
+    <string name="family_list_footer">ADD FAMILY MEMBER</string>
+    <string name="family_member_change_status_title">Status of %1$s %2$s?</string>
+
+
+    <!--Add post-->
+    <string name="add_post_title">Add activities</string>
+    <string name="add_post_select_person">Select person</string>
+    <string name="add_post_photo">Photo</string>
+    <string name="add_post_one_group_header">You need to select a child to create a new post</string>
+
+
+    <!--Add Family Screen-->
+    <string name="add_family_title">Add family</string>
+
+    <!--Add Event-->
+    <string name="add_event_title">Add Event</string>
+    <string name="add_event_photo">Photo</string>
+    <string name="add_event_file">Pick a file</string>
+    <string name="add_event_date">Pick datetime and datetime</string>
+    <string name="event_title">Events</string>
+    <string name="add_event_one_group_header">You can create the event for your group</string>
+    <string name="add_event_date_error">It\'s impossible to create an event on the date from the past</string>
+
+
+    <!--Check the code-->
+    <string name="check_the_code_title">Check the Child</string>
+    <string name="check_the_code_check_in">Check in Child</string>
+    <string name="check_the_code_check_out">Check out Child</string>
+    <string name="checks_empty_text_first"> Check-In / Check-Out a Child</string>
+    <string name="checks_empty_text_second">Verify Check Out Code before Releasing the Child!</string>
+
+
+    <!--Checks select member-->
+    <string name="checks_out_select_member_text">Who checking out %1$s?</string>
+    <string name="checks_in_select_member_text">Who checking in %1$s?</string>
+    <string name="checks_select_member_empty_list_header">These children do not have common parents with the full level of access. You can make a check-out of two or more children only if they have a common relative with the full level of access</string>
+    <string name="checks_select_member_button">Next</string>
+    <string name="checks_select_member_other">Other</string>
+
+    <!--Checks other-->
+    <string name="checks_other_first_name_hint">First name</string>
+    <string name="checks_other_last_name_hint">Last name</string>
+    <string name="checks_other_next">Next</string>
+
+    <!--Checks code-->
+    <string name="checks_code_enter">Enter a code</string>
+    <string name="checks_code_done">Done</string>
+    <string name="checks_code_text">You need to confirm the Secure Check out code before Releasing the Child</string>
+
+    <!--Checks Single Screen-->
+    <string name="checks_single_ok">OK</string>
+    <string name="checks_single_done">Done</string>
+
+    <!--Add/Edit child-->
+    <string name="add_child_remove_groups_waring">Are you sure you want remove this child from your groups?</string>
+    <string name="add_child_create_groups_empty">You can\'t create a parentChild without a group from the app. Please contact your school admin</string>
+
+    <!--School information-->
+    <string name="school_info_title">School Information</string>
+
+
+</resources>

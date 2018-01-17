@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin_16"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_16"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ltst.core.util.ForegroundImageView
+            android:id="@+id/feed_item_activity_image"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            app:FIV_foreground="@drawable/rounded_shape_foreground"/>
+
+        <TextView
+            android:id="@+id/feed_item_activity_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+            android:text="Group excursion to the Zoo. It was really cool. Everybody liked the elephants"
+            android:textColor="@color/dark_grey_blue"/>
+
+    </LinearLayout>
+
+</merge>

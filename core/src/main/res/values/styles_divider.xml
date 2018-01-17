@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="VerticalDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="HorizontalDivider.WhiteTwo">
+        <item name="android:background">@color/white_two</item>
+    </style>
+    <style name="HorizontalDivider.WhiteTwo.Short">
+        <item name="android:layout_marginLeft">72dp</item>
+    </style>
+</resources>

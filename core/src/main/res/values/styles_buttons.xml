@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--****************************************************************************************-->
+    <!--**********************************  THEMES  ********************************************-->
+    <!--****************************************************************************************-->
+    <style name="AppleGreenButtonTheme" parent="AppTheme">
+        <item name="colorAccent">@color/apple_green</item>
+        <item name="colorButtonNormal">#7f7f7f</item>
+        <item name="android:textColor">@color/default_button_text_color</item>
+    </style>
+
+    <style name="LightishBlueButtonTheme" parent="AppTheme">
+        <item name="colorAccent">@color/lightish_blue</item>
+        <item name="colorButtonNormal">#7f7f7f</item>
+        <item name="android:textColor">@color/default_button_text_color</item>
+    </style>
+
+    <!--****************************************************************************************-->
+    <!--**********************************  STYLES  ********************************************-->
+    <!--****************************************************************************************-->
+    <style name="DefaultButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:layout_marginLeft">@dimen/button_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/button_margin_horizontal</item>
+        <item name="fontPath">@string/roboto_medium</item>
+    </style>
+
+    <style name="DefaultButton.WhiteText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="colorButtonNormal">@color/apple_green</item>
+    </style>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/avatar_view_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/avatar_circle_photo"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:id="@+id/avatar_empty_underphoto_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/avatar_view_arrow_margin_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatar_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_blue_up"/>
+
+        <TextView
+            android:id="@+id/avatar_view_underphoto_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/avatar_view_under_camera_text_margin_top"
+            android:text="@string/avatar_view_under_camera_text"
+            android:textColor="@color/avatar_view_under_camera_text"
+            android:textSize="@dimen/text_14sp"/>
+    </LinearLayout>
+
+</LinearLayout>

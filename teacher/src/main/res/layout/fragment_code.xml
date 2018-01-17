@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/code_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_gravity="top"
+        android:layout_marginTop="40dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/activity_vertical_margin_6"
+        android:paddingTop="@dimen/code_content_padding_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/code_logo_margin_bottom">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/app_logo" />
+            </FrameLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/code_email_field"
+                style="@style/EditTextStyle.Inverse.Email"
+                android:layout_marginTop="@dimen/activity_vertical_margin_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/code_password_field" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/code_password_field"
+                style="@style/EditTextStyle.Inverse.Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/code_confirm_password_field" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/code_confirm_password_field"
+                style="@style/EditTextStyle.Inverse.ConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/code_code_field" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/code_code_field"
+                style="@style/EditTextStyle.Inverse.Code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone" />
+
+            <Button
+                android:layout_marginTop="@dimen/activity_vertical_margin_24"
+                android:id="@+id/code_login"
+                style="@style/DefaultButton"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/code_login" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

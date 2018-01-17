@@ -1,0 +1,123 @@
+<resources>
+    <!--app-->
+
+    <!--Enter screens-->
+    <dimen name="enter_logo_height">64dp</dimen>
+
+
+    <!--Start Screen-->
+    <dimen name="start_screen_or_margin_top">2dp</dimen>
+    <dimen name="start_screen_container_margin_bottom">16dp</dimen>
+    <dimen name="start_text_margin_horizontal">24dp</dimen>
+    <dimen name="start_text_margin_bottom">25dp</dimen>
+    <dimen name="start_screen_logo_margin_bottom">16dp</dimen>Email
+
+    <!--Code Screen-->
+    <dimen name="code_input_code_margin_bottom">36dp</dimen>
+    <dimen name="code_confirm_password_margin_bottom">18dp</dimen>
+    <dimen name="code_item_text_margin_bottom">18dp</dimen>
+    <dimen name="code_logo_margin_bottom">36dp</dimen>
+    <dimen name="code_content_padding_top">100dp</dimen>
+
+    <!--Login Screen-->
+    <dimen name="login_container_margin_bottom">38dp</dimen>
+    <dimen name="login_buton_margin_bottom">52dp</dimen>
+    <dimen name="login_password_margin_bottom">36dp</dimen>
+    <dimen name="login_email_margin_bottom">18dp</dimen>
+    <dimen name="login_logo_margin_bottom">50dp</dimen>
+    <dimen name="login_forgot_clickable_padding">10dp</dimen>
+
+    <!--Registration Screen-->
+    <dimen name="registration_container_margin_bottom">16dp</dimen>
+    <dimen name="registration_email_margin_bottom">18dp</dimen>
+    <dimen name="registration_password_margin_bottom">18dp</dimen>
+    <dimen name="registration_confirm_margin_bottom">66dp</dimen>
+    <dimen name="registration_logo_margin_bottom">48dp</dimen>
+    <dimen name="registration_content_padding_top">130dp</dimen>
+
+    <!--Welcome Screen-->
+    <dimen name="welcome_container_margin_bottom">16dp</dimen>
+    <dimen name="welcome_arrow_margin_bottom">10dp</dimen>
+    <dimen name="welcome_text_margin_horizontal">24dp</dimen>
+    <dimen name="welcome_text_margin_bottom">14dp</dimen>
+    <dimen name="welcome_house_margin_left">24dp</dimen>
+    <dimen name="welcome_house_margin_bottom">16dp</dimen>
+
+    <!--Edit Profile Screen-->
+    <dimen name="edit_profile_met_margin_top">10dp</dimen>
+    <dimen name="edit_profile_separator_margin_top">32dp</dimen>
+    <dimen name="edit_profile_school_info_margin_top">16dp</dimen>
+    <dimen name="edit_profile_school_info_margin_left">16dp</dimen>
+    <dimen name="edit_profile_container_maring_bottom">40dp</dimen>
+    <dimen name="edit_profile_first_met_margin_top">24dp</dimen>
+
+    <!--Children Screen-->
+    <dimen name="children_empty_text_margin_top">10dp</dimen>
+    <dimen name="children_empty_text_margin_bootom">40dp</dimen>
+    <dimen name="children_empty_container_margin_left">26dp</dimen>
+    <dimen name="children_empty_container_margin_right">18dp</dimen>
+
+    <!--AddChild Screen-->
+    <dimen name="add_child_name_margin_top">24dp</dimen>
+    <dimen name="add_child_gender_margin_left">18dp</dimen>
+    <dimen name="add_child_gender_margin_top">16dp</dimen>
+    <dimen name="add_child_gender_separator_margin_top">16dp</dimen>
+    <dimen name="add_child_gender_switcher_margin_top">50dp</dimen>
+    <dimen name="add_child_gender_switcher_margin_horizontal">24dp</dimen>
+    <dimen name="custom_prifle_item_margin_right">84dp</dimen>
+    <dimen name="add_child_bithday_margin_top">36dp</dimen>
+    <dimen name="add_child_medical_separator_margin_top">62dp</dimen>
+    <dimen name="add_child_medical_margin_top">10dp</dimen>
+    <dimen name="add_child_additional_margin_top">30dp</dimen>
+    <dimen name="add_child_blood_margin_top">30dp</dimen>
+    <dimen name="add_child_container_margin_bottom">32dp</dimen>
+    <dimen name="add_child_group_item_avatar_size">40dp</dimen>
+
+    <!--Children Screen-->
+    <dimen name="children_blue_arrow_margin_left">6dp</dimen>
+    <dimen name="children_blue_arrow_margin_bottom">8dp</dimen>
+    <dimen name="children_empty_arrow_container_margin_top">16dp</dimen>
+
+    <!--Settings-->
+    <dimen name="settings_item_height">54dp</dimen>
+    <dimen name="settings_groups_item_height">42dp</dimen>
+
+    <!--Forgot Screen-->
+    <dimen name="forgot_button_margin_left">34dp</dimen>
+    <dimen name="forgot_container_margin_top">112dp</dimen>
+    <dimen name="forgot_logo_margin_top">12dp</dimen>
+    <dimen name="forgot_arrow_margin_left">20dp</dimen>
+    <dimen name="new_pass_container_margin_bottom">16dp</dimen>
+    <dimen name="new_pass_button_margin_top">52dp</dimen>
+
+
+
+    <!--AddMember Screen-->
+    <dimen name="add_member_name_margin_top">24dp</dimen>
+    <dimen name="add_member_gender_margin_left">18dp</dimen>
+    <dimen name="add_member_gender_margin_top">16dp</dimen>
+    <dimen name="add_member_gender_separator_margin_top">16dp</dimen>
+    <dimen name="add_member_gender_switcher_margin_top">50dp</dimen>
+    <dimen name="add_member_gender_switcher_margin_horizontal">24dp</dimen>
+    <!--<dimen name="custom_prifle_item_margin_right">92dp</dimen>-->
+    <dimen name="add_member_bithday_margin_top">36dp</dimen>
+    <dimen name="add_member_medical_separator_margin_top">62dp</dimen>
+    <dimen name="add_member_medical_margin_top">10dp</dimen>
+    <dimen name="add_member_additional_margin_top">30dp</dimen>
+    <dimen name="add_member_blood_margin_top">30dp</dimen>
+    <dimen name="add_member_container_margin_bottom">32dp</dimen>
+
+    <!--Add post-->
+    <dimen name="add_post_child_activity_image_size">60dp</dimen>
+    <dimen name="add_post_activities_horizontal_margin">34dp</dimen>
+    <dimen name="add_post_activities_vertical_margin">10dp</dimen>
+    <dimen name="add_post_photo_size">64dp</dimen>
+    <dimen name="add_post_activities_list_height">220dp</dimen>
+
+
+
+    <!--<dimen name="profile_avatar_margin_top">32dp</dimen>-->
+    <!--<dimen name="profile_arrow_margin_top">10dp</dimen>-->
+    <!--<dimen name="profile_under_camera_text_margin_top">6dp</dimen>-->
+
+</resources>

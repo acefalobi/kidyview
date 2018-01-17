@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/edit_profile_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:id="@+id/edit_profile_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ltst.core.ui.AvatarView
+                android:id="@+id/edit_profile_avatar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/avatar_view_avatar_margin_top"
+                app:required="true"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_name"
+                style="@style/EditTextStyle.Profile.Name.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_first_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_last_name"
+                style="@style/EditTextStyle.Profile.EmptyIcon.LastName.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_personal_phone"
+                style="@style/EditTextStyle.Profile.PersonalPhone.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_secod_phone"
+                style="@style/EditTextStyle.Profile.PersonalPhone.NotRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_personal_email"
+                style="@style/EditTextStyle.Profile.PersonalEmail.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"
+                />
+
+            <View
+                android:id="@+id/edit_profile_school_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/edit_profile_separator_margin_top"
+                android:background="@color/separator_grey"/>
+
+
+            <TextView
+                android:id="@+id/edit_profile_school_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_profile_school_info_margin_left"
+                android:layout_marginTop="@dimen/edit_profile_school_info_margin_top"
+                android:text="@string/profile_school_info"
+                android:textColor="@color/blue_grey"
+                android:textSize="@dimen/text_20sp"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_school_title"
+                style="@style/EditTextStyle.Profile.SchoolTitle.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_school_address"
+                style="@style/EditTextStyle.Profile.SchoolAddress.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_school_phone"
+                style="@style/EditTextStyle.Profile.SchoolPhone.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_school_additional_phone"
+                style="@style/EditTextStyle.Profile.SchoolPhone.Additional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edit_profile_school_email"
+                style="@style/EditTextStyle.Profile.SchoolEmail.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/edit_profile_container_maring_bottom"
+                android:layout_marginTop="@dimen/edit_profile_met_margin_top"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

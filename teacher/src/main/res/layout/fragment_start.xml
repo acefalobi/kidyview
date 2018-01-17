@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_marginBottom="@dimen/start_screen_container_margin_bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/start_screen_logo_margin_bottom">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/app_logo" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/start_welcome_text_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/start_text_margin_bottom"
+            android:layout_marginLeft="@dimen/start_text_margin_horizontal"
+            android:layout_marginRight="@dimen/start_text_margin_horizontal"
+            android:gravity="left"
+            android:lineSpacingMultiplier="1.5"
+            />
+
+
+        <Button
+            android:id="@+id/start_code"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_screen_code_button" />
+
+        <Button
+            android:id="@+id/start_registration"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_screen_registration_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/start_screen_or_margin_top"
+            android:gravity="center"
+            android:text="@string/start_screen_or"
+            android:textSize="@dimen/text_24sp" />
+
+        <Button
+            android:id="@+id/start_login"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_screen_login_button" />
+    </LinearLayout>
+
+
+</FrameLayout>

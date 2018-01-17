@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/add_member_proress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/add_member_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin_32">
+
+            <com.ltst.core.ui.AvatarView
+                android:id="@+id/add_member_avatar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/avatar_view_avatar_margin_top"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_status"
+                style="@style/EditTextStyle.Profile.Status.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_name"
+                style="@style/EditTextStyle.Profile.Name.NoIcon.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_last_name"
+                style="@style/EditTextStyle.Profile.EmptyIcon.LastName.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_phone"
+                style="@style/EditTextStyle.Profile.PersonalPhone.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_secod_phone"
+                style="@style/EditTextStyle.Profile.PersonalPhone.NotRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_member_mail"
+                style="@style/EditTextStyle.Profile.PersonalEmail.Required"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_24"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

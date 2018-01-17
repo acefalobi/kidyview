@@ -1,0 +1,57 @@
+<resources>
+
+    <!--Settings-->
+
+    <style name="SettingsContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/settings_item_height</item>
+        <item name="android:paddingLeft">@dimen/activity_vertical_margin_16</item>
+        <item name="android:paddingRight">@dimen/activity_vertical_margin_16</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+    <style name="SelectPersonContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/settings_item_height</item>
+        <item name="android:paddingLeft">@dimen/activity_vertical_margin_16</item>
+        <item name="android:paddingRight">@dimen/activity_vertical_margin_16</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+
+    <style name="SettingsText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey_blue</item>
+        <item name="android:textSize">@dimen/text_18sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+
+    <style name="AddPostSelectPersonNotSelected">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lightish_blue</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="AddPostSelectPersonSelected">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey_blue</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="AddEventBottomButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin_16</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:drawablePadding">@dimen/activity_vertical_margin_8</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>

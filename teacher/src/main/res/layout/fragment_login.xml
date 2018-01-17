@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/edit_profile_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_gravity="top"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/enter_logo_height"
+            android:layout_marginBottom="@dimen/login_logo_margin_bottom">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/enter_logo_height"
+                android:layout_gravity="center"
+                android:src="@drawable/app_logo" />
+        </FrameLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/login_email_field"
+            style="@style/EditTextStyle.Inverse.Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_10"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/login_password_field" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/login_password_field"
+            style="@style/EditTextStyle.Inverse.Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_36"
+            android:imeOptions="actionDone" />
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_52"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/login_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_40"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="@dimen/login_forgot_clickable_padding"
+            android:text="@string/login_forgot_password" />
+
+    </LinearLayout>
+
+</FrameLayout>

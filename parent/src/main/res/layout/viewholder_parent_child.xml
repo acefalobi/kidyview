@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/children_viewholder_root"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:foreground="?selectableItemBackground"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/activity_vertical_margin_24"
+              android:paddingTop="@dimen/activity_vertical_margin_16"
+    >
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--&gt;-->
+
+
+    <com.ltst.core.ui.AvatarView
+        android:id="@+id/parent_child_viewholder_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_24"
+        app:av_background="@drawable/avatar_child_holder_64"
+        app:show_under_avatar="false"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_32"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/parent_child_viewholder_name_filed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin_4"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="First Name"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/text_24sp"
+            />
+
+        <TextView
+            android:id="@+id/parent_child_viewholder_last_name_filed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Last Name"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/text_24sp"
+            />
+
+        <TextView
+            android:id="@+id/parent_child_viewholder_school_filed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin_6"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="boy 4 year old"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/children_viewholder_missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_8"
+        android:background="@drawable/member_status_backgournd_grey"
+        android:paddingBottom="@dimen/activity_vertical_margin_8"
+        android:paddingLeft="@dimen/activity_vertical_margin_8"
+        android:paddingRight="@dimen/activity_vertical_margin_8"
+        android:paddingTop="@dimen/activity_vertical_margin_8"
+        android:text="@string/children_viewholder_not_provided"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        />
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/children_viewholder_menu"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right|top"-->
+    <!--android:background="?selectableItemBackgroundBorderless"-->
+    <!--android:layout_marginTop="@dimen/activity_vertical_margin_16"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin_8"-->
+    <!--android:paddingLeft="@dimen/activity_vertical_margin_8"-->
+    <!--android:paddingRight="@dimen/activity_vertical_margin_8"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin_8"-->
+    <!--android:src="@drawable/ic_card_menu_24dp"-->
+    <!--android:tint="@color/bluegrey"/>-->
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right|bottom"-->
+    <!--android:layout_marginRight="@dimen/activity_horizontal_margin_16"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin_16"-->
+    <!--android:src="@drawable/ic_unread_message"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:paddingTop="16dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:background="@color/separator_grey"/>-->
+
+</LinearLayout>

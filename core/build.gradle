@@ -1,0 +1,130 @@
+apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    lintOptions {
+        abortOnError false
+    }
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    RETROFIT = 'com.squareup.retrofit2:retrofit:2.1.0'
+    MOSHI = 'com.squareup.moshi:moshi:1.2.0'
+    MOSHI_CONVERTER = 'com.squareup.retrofit2:converter-moshi:2.1.0'
+    LOGGIN_INTERCEPTOR = 'com.squareup.okhttp3:logging-interceptor:3.4.0'
+    OKHTTP = 'com.squareup.okhttp3:okhttp:3.4.0'
+    TIMBER = 'com.jakewharton.timber:timber:4.3.0'
+
+    GLIDE = 'com.github.bumptech.glide:glide:3.7.0'
+    PICASSO = 'com.squareup.picasso:picasso:2.5.2' //for atlas widgets
+
+    RX_JAVA = 'io.reactivex:rxjava:1.1.10'
+    RX_ANDROID = 'io.reactivex:rxandroid:1.2.1'
+
+    BUTTERKNIFE = 'com.jakewharton:butterknife:8.2.1'
+    BUTTERKNIFE_COMPILER = 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    MATERIAL_EDIT_TEXT = 'com.rengwuxian.materialedittext:library:2.1.4'
+    RX_ADAPTER = 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    CALLIGRAPHY = 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    GSM_SERVICE = 'com.google.android.gms:play-services-gcm:9.4.0'
+
+    //    SUPPORT
+    SUPPORT_DESIGN = 'com.android.support:design:24.2.0'
+    PERCENT = 'com.android.support:percent:24.2.0'
+    RECYLER_VIEW = 'com.android.support:recyclerview-v7:24.2.0'
+    CARD_VIEW = 'com.android.support:cardview-v7:24.2.0'
+
+
+    DATE_PICKER = 'com.wdullaer:materialdatetimepicker:2.5.0'
+
+    RECYLER_BINDABLE_ADAPTERS = 'com.github.princeparadoxes:recyclerbindableadapter:1.3'
+    CARD_VIEW = 'com.android.support:cardview-v7:24.2.0'
+
+    REALM_RECYCLER_VIEW = "com.github.thorbenprimke:realm-recyclerview:0.9.23"
+
+
+    CANNY_VIEW_ANIMATOR = 'com.livetyping:cannyviewanimator:0.8'
+
+    STETHO = 'com.facebook.stetho:stetho:1.4.1'
+    STETHO_REALM = 'com.uphyca:stetho_realm:0.9.0'
+
+    MULTIDEX = 'com.android.support:multidex:1.0.1'
+
+    LAYER = 'com.layer.sdk:layer-sdk:0.23.6'
+    PLAY_SERVICES_GCM = 'com.google.android.gms:play-services-gcm:9.6.1'
+    FIREBASE_MESSAGING = 'com.google.firebase:firebase-messaging:9.6.1'
+    SLF4J = 'org.slf4j:slf4j-nop:1.5.8'
+
+
+
+    PROJECT_DEPENDENCIES = [
+            RETROFIT,
+            MOSHI,
+            MOSHI_CONVERTER,
+            LOGGIN_INTERCEPTOR,
+            OKHTTP,
+            RX_JAVA,
+            RX_ANDROID,
+            TIMBER,
+            BUTTERKNIFE,
+            MATERIAL_EDIT_TEXT,
+            RX_ADAPTER,
+            GSM_SERVICE,
+            SUPPORT_DESIGN,
+            CALLIGRAPHY,
+            GLIDE,
+            PICASSO,
+            DATE_PICKER,
+            RECYLER_VIEW,
+            RECYLER_BINDABLE_ADAPTERS,
+            CARD_VIEW,
+            RECYLER_BINDABLE_ADAPTERS,
+            CANNY_VIEW_ANIMATOR,
+            PERCENT,
+            STETHO,
+            REALM_RECYCLER_VIEW,
+            MULTIDEX,
+            LAYER,
+            FIREBASE_MESSAGING,
+            PLAY_SERVICES_GCM,
+            SLF4J
+//            STETHO_REALM
+    ]
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile PROJECT_DEPENDENCIES
+    compile project(':utils')
+    compile project(path: ':layer-atlas')
+}
+

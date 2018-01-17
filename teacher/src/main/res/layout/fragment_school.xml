@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:orientation="vertical">
+
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_34"
+        app:left_icon="@drawable/ic_house"
+        app:secondary_text="@string/met_hint_school_title"
+        />
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/ic_location"
+        app:secondary_text="@string/met_hint_school_address"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_phone"
+        app:secondary_text="@string/met_hint_school_phone"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_additional_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+
+        app:secondary_text="@string/met_hint_school_additional_phone"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/edit_profile_container_maring_bottom"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_mail"
+        app:secondary_text="@string/met_hint_school_email"/>
+</LinearLayout>

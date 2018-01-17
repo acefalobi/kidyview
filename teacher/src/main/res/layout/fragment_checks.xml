@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/checks_swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.livetyping.library.CannyViewAnimator
+            android:id="@+id/checks_animator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView
+                android:id="@+id/checks_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rrvLayoutType="LinearLayout" />
+
+
+            <RelativeLayout
+                android:id="@+id/checks_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/checks_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin_24"
+                    android:src="@drawable/ic_checks_empty_icon" />
+
+                <TextView
+                    android:id="@+id/checks_empty_text_first"
+                    style="@style/OpenSansLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checks_note"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin_16"
+                    android:text="@string/checks_empty_text_first"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textSize="@dimen/text_28sp" />
+
+                <TextView
+                    android:id="@+id/checks_empty_text_second"
+                    style="@style/OpenSans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checks_empty_text_first"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin_16"
+                    android:text="@string/checks_empty_text_second"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textSize="@dimen/text_28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/checks_check_in_arrow_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/checks_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="128dp"
+                    android:text="@string/checks_arrow_text"
+                    android:textColor="@color/lightish_blue"
+                    android:textSize="@dimen/text_16sp" />
+
+                <ImageView
+                    android:id="@+id/checks_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="80dp"
+                    android:paddingBottom="@dimen/activity_horizontal_margin_16"
+                    android:src="@drawable/feed_add_activity_arrow" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/checks_dated_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/OpenSansLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checks_note"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin_32"
+                    android:text="@string/checks_dated_empty_text"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textSize="@dimen/text_28sp" />
+            </FrameLayout>
+
+
+        </com.livetyping.library.CannyViewAnimator>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:layout_gravity="start|bottom"
+        android:layout_margin="@dimen/activity_horizontal_margin_16"
+        app:layout_behavior="@string/fab_show_hide_behavior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/10" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/checks_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/activity_horizontal_margin_16"
+        android:src="@drawable/ic_done_white_24dp"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/activity_horizontal_margin_16"
+        app:layout_behavior="@string/fab_show_hide_behavior" />
+
+
+</android.support.design.widget.CoordinatorLayout>

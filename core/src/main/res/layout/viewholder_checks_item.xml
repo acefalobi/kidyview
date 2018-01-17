@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/fragment_checks_item_top_divider"
+        style="@style/HorizontalDivider.WhiteTwo"
+        android:layout_alignParentTop="true"/>
+
+    <com.ltst.core.util.ForegroundImageView
+        android:id="@+id/fragment_checks_item_photo"
+        android:layout_width="@dimen/select_person_icon_size"
+        android:layout_height="@dimen/select_person_icon_size"
+        android:layout_marginLeft="@dimen/activity_vertical_margin_16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin_16"
+        app:FIV_foreground="@drawable/rounded_shape_foreground"
+        app:srcCompat="@drawable/avatar_circle_cave"/>
+
+    <TextView
+        android:id="@+id/fragment_checks_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/select_person_icon_size"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin_16"
+        android:layout_toRightOf="@+id/fragment_checks_item_photo"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/activity_horizontal_margin_16"
+        android:text="Child"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/greyish_brown"
+        android:textSize="@dimen/text_24sp"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_checks_item_states_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_checks_item_text"
+        android:paddingLeft="@dimen/activity_vertical_margin_8"
+        android:paddingRight="@dimen/activity_vertical_margin_8"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin_16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin_16"
+        android:orientation="vertical"/>
+
+    <View
+        android:id="@+id/fragment_checks_item_bottom_divider"
+        style="@style/HorizontalDivider.WhiteTwo"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/fragment_checks_item_bottom_short_divider"
+        style="@style/HorizontalDivider.WhiteTwo.Short"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

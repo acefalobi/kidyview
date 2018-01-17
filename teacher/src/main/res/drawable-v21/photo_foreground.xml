@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?selectableItemBackground">
+
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid
+                android:color="#20000000"/>
+            <size
+                android:width="@dimen/add_post_photo_size"
+                android:height="@dimen/add_post_photo_size"/>
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_clear_white_24dp"/>
+    </item>
+</layer-list>

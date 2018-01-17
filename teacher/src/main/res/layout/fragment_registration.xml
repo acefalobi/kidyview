@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/edit_profile_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_gravity="top"
+        android:layout_marginTop="40dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/activity_vertical_margin_6"
+        android:paddingTop="@dimen/registration_content_padding_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/enter_logo_height"
+                android:layout_marginBottom="@dimen/registration_logo_margin_bottom">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/enter_logo_height"
+                    android:layout_gravity="center"
+                    android:src="@drawable/app_logo" />
+
+            </FrameLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/registration_email_field"
+                style="@style/EditTextStyle.Inverse.Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/registration_email_margin_bottom"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/registration_pass_field" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/registration_pass_field"
+                style="@style/EditTextStyle.Inverse.Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/registration_password_margin_bottom"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/registration_pass_confirm_field" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/registration_pass_confirm_field"
+                style="@style/EditTextStyle.Inverse.ConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/registration_password_margin_bottom"
+                android:imeOptions="actionDone" />
+
+
+            <Button
+                android:id="@+id/registration_button"
+                style="@style/DefaultButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin_24"
+
+                android:text="@string/registration_button_text" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

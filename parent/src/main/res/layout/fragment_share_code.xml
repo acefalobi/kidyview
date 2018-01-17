@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/share_code_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin_60"
+            android:layout_marginTop="@dimen/activity_vertical_margin_52"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/text_24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin_20"
+            android:text="@string/share_code_code"
+            android:textColor="@color/bluish_grey"
+            android:textSize="@dimen/text_12sp" />
+
+        <TextView
+            android:id="@+id/share_code_code_field"
+            style="@style/OpenSansLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/apple_green"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/text_34sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/share_code_button"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/activity_vertical_margin_6"
+        android:text="@string/share_code_share"
+        android:textColor="@android:color/white" />
+
+</FrameLayout>

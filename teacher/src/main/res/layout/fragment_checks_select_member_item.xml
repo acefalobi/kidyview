@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/select_person_item_size"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.ltst.core.util.ForegroundImageView
+        android:id="@+id/fragment_checks_select_member_item_icon"
+        android:layout_width="@dimen/select_person_icon_size"
+        android:layout_height="@dimen/select_person_icon_size"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_16"
+        app:FIV_foreground="@drawable/rounded_shape_foreground"
+        app:srcCompat="@drawable/avatar_circle_cave"/>
+
+    <TextView
+        android:id="@+id/fragment_checks_select_member_item_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/activity_horizontal_margin_16"
+        android:text="Group"
+        android:textColor="@color/dark_grey_blue"
+        android:textSize="@dimen/text_16sp"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/fragment_checks_select_member_item_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_marginRight="@dimen/activity_vertical_margin_20"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/feed_menu_calendar"
+        android:icon="@drawable/ic_calendar_white"
+        android:title="@string/feed_menu_calendar"
+        app:showAsAction="always"/>
+
+    <!---->
+    <item
+        android:id="@+id/feed_menu_generate_code"
+        android:icon="@drawable/group"
+        android:title="@string/checks_title"
+        app:showAsAction="always"/>
+</menu>

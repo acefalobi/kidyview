@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendar_item_view_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/calendar_item_view_month_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_18sp"
+        android:visibility="gone"
+        tools:text="April"
+        />
+
+    <ProgressBar
+        android:id="@+id/event_points_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+    <TableLayout
+        android:id="@+id/calendar_item_view_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_monday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_monday"
+                android:textAllCaps="true"
+                android:textColor="@color/black_38"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_tuesday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_tuesday"
+                android:textAllCaps="true"
+                android:textColor="@color/black_38"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_wednesday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_wednesday"
+                android:textAllCaps="true"
+                android:textColor="@color/black_38"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_thursday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_thursday"
+                android:textAllCaps="true"
+                android:textColor="@color/black_38"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_friday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_friday"
+                android:textAllCaps="true"
+                android:textColor="@color/black_38"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_saturday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_saturday"
+                android:textAllCaps="true"
+                android:textColor="@color/coral"
+                />
+
+            <TextView
+                android:id="@+id/weekly_calendar_item_sunday_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/weekly_calendar_view_sunday"
+                android:textAllCaps="true"
+                android:textColor="@color/coral"
+                />
+        </TableRow>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+        <include layout="@layout/calendar_month_row_view"/>
+
+    </TableLayout>
+
+</LinearLayout>

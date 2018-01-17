@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/welcome_container_margin_bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/welcome_house_margin_bottom"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:src="@drawable/bitmap_school"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            style="@style/OpenSansLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/welcome_text_margin_bottom"
+            android:layout_marginLeft="@dimen/welcome_text_margin_horizontal"
+            android:layout_marginRight="@dimen/welcome_text_margin_horizontal"
+            android:text="@string/welcome_text"
+            android:textSize="@dimen/text_28sp"
+            />
+
+
+        <Button
+            android:id="@+id/welcome_continue_button"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_button_text"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              app:layout_scrollFlags="scroll|snap">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background">
+
+        <ProgressBar
+            android:id="@+id/profile_progress_bar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_bar_height"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/activity_vertical_margin_4"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_scrollFlags="scroll|snap"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <com.ltst.core.ui.AvatarView
+                android:id="@+id/profile_header_avatar_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/activity_vertical_margin_32"
+                app:child_holder="false"
+                app:show_under_avatar="false"/>
+
+            <TextView
+                android:id="@+id/profile_header_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_8"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_8"
+                android:layout_marginTop="@dimen/activity_vertical_margin_8"
+                android:gravity="center"
+                android:paddingBottom="@dimen/activity_vertical_margin_16"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_24sp"/>
+
+            <TextView
+                android:id="@+id/profile_email_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin_14"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_16sp"/>
+
+            <TextView
+                android:id="@+id/profile_phones_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin_2"
+                android:paddingBottom="@dimen/activity_vertical_margin_14"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_16sp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_header_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_family"
+        app:main_text="@string/profile_header_school"
+        app:right_arrow="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator_grey"/>
+
+    <!--invisible for beta version-->
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_header_subscription_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_subscription"
+        app:main_text="@string/profile_header_subscription"
+        app:right_arrow="true"
+        android:visibility="gone"/>
+
+</LinearLayout>

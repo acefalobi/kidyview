@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:id="@+id/children_empty_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="@dimen/children_empty_container_margin_right"
+            android:layout_marginTop="@dimen/children_empty_arrow_container_margin_top"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/OpenSans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/children_add_child"
+                android:textColor="@color/lightish_blue"
+                android:textSize="@dimen/text_16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/children_blue_arrow_margin_bottom"
+                android:layout_marginLeft="@dimen/children_blue_arrow_margin_left"
+                android:src="@drawable/ic_arrow_curved_blue"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/children_empty_container_margin_left"
+            android:layout_marginRight="@dimen/children_empty_container_margin_right"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_folder"/>
+
+            <TextView
+                style="@style/OpenSansLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="@dimen/children_empty_text_margin_bootom"
+                android:layout_marginTop="@dimen/children_empty_text_margin_top"
+                android:text="@string/children_empty_text"
+                android:textColor="@color/dark_grey_blue"
+                android:textSize="@dimen/text_28sp"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/children_load_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_bar_height"
+            android:layout_gravity="top"
+            android:indeterminate="true"/>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/children_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone"/>
+
+</FrameLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_post_group_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/add_post_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/add_child_group_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|snap">
+
+            <TextView
+                android:id="@+id/add_post_group_header"
+                style="@style/OpenSansLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin_8"
+                android:layout_marginTop="@dimen/activity_vertical_margin_16"
+                android:text="@string/checks_select_group_text"
+
+                android:textColor="@color/bluish_grey"
+                android:textSize="@dimen/text_18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin_8"
+                android:layout_marginTop="@dimen/activity_vertical_margin_6"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin_10">
+
+                <TextView
+                    android:id="@+id/add_post_group_field"
+                    style="@style/OpenSansLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textSize="@dimen/text_24sp"/>
+
+                <ImageView
+                    android:id="@+id/add_post_group_spinner_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_10"
+                    android:src="@drawable/ic_arrow_drop_down_green"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          xmlns:app="http://schemas.android.com/apk/res-auto"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:animateLayoutChanges="true"
+                          android:focusableInTouchMode="true"
+                          android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/add_post_progress_bar"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:indeterminate="true"
+                    android:visibility="gone"/>
+
+                <!--<View-->
+                <!--style="@style/HorizontalDivider.WhiteTwo"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin_16"/>-->
+
+                <FrameLayout
+                    android:id="@+id/add_post_select_person"
+                    style="@style/SettingsContainer">
+
+                    <TextView
+                        android:id="@+id/select_person_text"
+                        style="@style/AddPostSelectPersonNotSelected"
+                        android:text="@string/add_post_select_person"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:src="@drawable/ic_chevron_right_black_24dp"
+                        android:tint="@color/lightish_blue"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+                <View style="@style/HorizontalDivider.WhiteTwo"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:id="@+id/add_post_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.ltst.core.util.ForegroundImageView
+                            android:id="@+id/add_post_current_activity_image"
+                            android:layout_width="@dimen/add_post_child_activity_image_size"
+                            android:layout_height="@dimen/add_post_child_activity_image_size"
+                            android:layout_marginLeft="@dimen/activity_vertical_margin_14"
+                            android:layout_marginRight="@dimen/activity_vertical_margin_14"
+                            app:FIV_foreground="@drawable/rounded_shape_foreground"/>
+
+                        <TextView
+                            android:id="@+id/add_post_current_activity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin_4"
+                            android:textColor="@color/blue_grey"
+
+                            android:textSize="@dimen/text_14sp"/>
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/add_post_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_horizontal_margin_16"
+                        android:layout_toRightOf="@+id/add_post_activity"
+                        android:background="@null"
+                        android:lines="5"
+                        android:textColor="@color/dark_grey_blue"/>
+                    <LinearLayout
+                        android:layout_below="@id/add_post_text"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/add_post_photo_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/add_post_photo_size"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/add_post_camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/activity_vertical_margin_16"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:drawableLeft="@drawable/ic_camera_24dp"
+                            android:drawablePadding="@dimen/activity_vertical_margin_12"
+                            android:text="@string/add_post_photo"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <View style="@style/HorizontalDivider.WhiteTwo"/>
+
+        <TextView
+            android:id="@+id/add_post_child_activity_header"
+            style="@style/RobotoMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+            android:layout_marginTop="@dimen/activity_vertical_margin_12"
+            android:text="Activity"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/text_14sp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/add_post_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_post_activities_list_height"
+            android:paddingBottom="@dimen/activity_vertical_margin_14"
+            android:paddingTop="@dimen/activity_vertical_margin_6"/>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

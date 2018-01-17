@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/edit_group_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <com.ltst.core.ui.AvatarView
+        android:id="@+id/edit_group_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin_32"
+        app:av_background="@drawable/avatar_circle_cave"
+        android:visibility="gone"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin_16"
+        android:layout_marginRight="@dimen/activity_vertical_margin_16"
+        android:layout_marginTop="@dimen/activity_vertical_margin_32"
+        android:hint="@string/edit_group_name"
+        android:inputType="textCapWords"
+        app:met_baseColor="@color/dark_grey_blue"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelPadding="@dimen/met_label_padding"
+        app:met_primaryColor="@color/bluish_grey"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@android:color/black"
+        app:met_textColorHint="@color/bluish_grey"
+        android:visibility="gone"/>
+</LinearLayout>

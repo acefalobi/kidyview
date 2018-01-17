@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendar_item_day_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/weekly_calendar_item_day_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        >
+
+        <TextView
+            android:id="@+id/weekly_calendar_item_day_of_month_title_view"
+            android:layout_width="@dimen/weekly_calendar_selector_circle_size"
+            android:layout_height="@dimen/weekly_calendar_selector_circle_size"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/text_calendar_inactive_color"
+            android:textSize="16sp"
+            tools:background="@drawable/sp_weekly_calendar_round_selector"
+            tools:text="7"
+            tools:textColor="@color/text_calendar_active_color"
+            />
+
+    </FrameLayout>
+
+
+    <!--<View-->
+    <!--android:id="@+id/weekly_calendar_item_schedule_first_point_view"-->
+    <!--android:layout_width="@dimen/weekly_calendar_schedule_small_point_size"-->
+    <!--android:layout_height="@dimen/weekly_calendar_schedule_small_point_size"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--tools:background="@drawable/sp_weekly_calendar_schedule_big_point"-->
+    <!--/>-->
+
+    <LinearLayout
+        android:id="@+id/weekly_calendar_item_schedule_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/weekly_calendar_schedule_container_point_size"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <!--<View-->
+        <!--android:id="@+id/weekly_calendar_item_schedule_first_point_view"-->
+        <!--android:layout_width="@dimen/weekly_calendar_schedule_small_point_size"-->
+        <!--android:layout_height="@dimen/weekly_calendar_schedule_small_point_size"-->
+        <!--tools:background="@drawable/sp_weekly_calendar_schedule_small_point"-->
+        <!--/>-->
+
+        <View
+            android:id="@+id/weekly_calendar_item_schedule_second_point_view"
+            android:layout_width="@dimen/weekly_calendar_schedule_big_point_size"
+            android:layout_height="@dimen/weekly_calendar_schedule_big_point_size"
+            android:layout_margin="2dp"
+            android:background="@drawable/sp_weekly_calendar_schedule_big_point"
+            />
+
+        <!--<View-->
+        <!--android:id="@+id/weekly_calendar_item_schedule_third_point_view"-->
+        <!--android:layout_width="@dimen/weekly_calendar_schedule_small_point_size"-->
+        <!--android:layout_height="@dimen/weekly_calendar_schedule_small_point_size"-->
+        <!--tools:background="@drawable/sp_weekly_calendar_schedule_small_point"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+</LinearLayout>

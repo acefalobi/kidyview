@@ -1,0 +1,244 @@
+<resources>
+    <string name="app_name">core</string>
+    <string name="email_hint">E-mail</string>
+    <string name="empty_field_error">This field can`t be empty</string>
+    <string name="photo">Photo</string>
+
+    <!--Permissions-->
+    <!--поправила-->
+    <string name="rationale_write_external_storage_text">App needs access to your photos for this action</string>
+    <!--поправила-->
+    <string name="rationale_camera_storage_text">App needs access to your camera for this action</string>
+
+    <!--Type Faces-->
+    <string name="open_sans_light">fonts/open-sans.light.ttf</string>
+    <string name="open_sans">fonts/OpenSans-Regular.ttf</string>
+    <string name="open_sans_extra_bold">OpenSans-ExtraBold.ttf</string>
+    <string name="roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="roboto_medium">fonts/Roboto-Medium.ttf</string>
+    <string name="roboto_regular">fonts/Roboto-Regular.ttf</string>
+
+
+    <!--Allert-->
+    <string name="error_unknown">Unknown Error</string>
+    <string name="error_no_network_connection">Check your network connection</string>
+    <string name="error_title">Error</string>
+    <string name="ok">OK</string>
+    <string name="network_error_title">Network Error</string>
+    <string name="server_error_title">Server Error</string>
+    <string name="login_error_message">Check your email and password</string>
+    <string name="login_user_not_found_error">User is not registered</string>
+    <!--поправила--> <string name="error_not_found_file_manager">File Manager not found. Please install
+    a file manager</string>
+    <string name="empty_event_error">Event can`t be empty</string>
+    <!--поправила-->
+    <string name="time_event_error">Please set the event time</string>
+
+    <!--Notifications-->
+    <string name="notifications_layer_image">Attaсhment: image</string>
+    <string name="dialog_title_success">Success</string>
+
+    <!--Material edit text-->
+    <string name="met_hint_name">Name</string>
+    <string name="met_hint_name_required">Name*</string>
+    <string name="met_hint_code">School Code</string>
+    <string name="met_hint_password">Password</string>
+    <string name="met_hint_new_password">New Password</string>
+    <string name="met_hint_confirm_password">Repeat password</string>
+    <string name="met_hint_last_name">Last Name</string>
+    <string name="met_hint_last_name_required">Last Name*</string>
+    <string name="met_new_password_code">Code</string>
+    <string name="met_hint_genotype">Genotype</string>
+    <string name="met_hint_personal_phone">Personal Phone</string>
+    <string name="met_hint_personal_phone_required">Personal Phone*</string>
+    <string name="met_hint_second_personal_phone">Additional Phone</string>
+    <string name="met_hint_personal_email">Personal E-mail</string>
+    <string name="met_hint_personal_email_required">Personal E-mail*</string>
+    <!--поправила-->
+    <string name="met_hint_school_title">School Name</string>
+    <!--поправила-->
+    <string name="met_hint_school_title_required">School Name*</string>
+    <string name="met_hint_school_address">School Address</string>
+    <string name="met_hint_school_address_required">School Address*</string>
+    <string name="met_hint_school_phone">School Phone Number</string>
+    <string name="met_hint_school_additional_phone">School Additional Phone Number</string>
+    <string name="met_hint_school_phone_required">School Phone Number*</string>
+    <string name="met_hint_school_email">School E-mail</string>
+    <string name="met_hint_school_email_required">School E-mail*</string>
+    <string name="met_hint_allergies">Allergies</string>
+    <string name="met_hint_additional">Additional Information</string>
+    <string name="met_hint_blood_group">Blood Group</string>
+    <string name="met_hint_status">Status</string>
+    <string name="met_hint_status_required">Status*</string>
+    <string name="met_hint_personal_second">Additional Phone</string>
+
+
+    <!--Avatar View-->
+    <string name="avatar_view_under_camera_text">Click to choose a photo</string>
+    <string name="menu_done">Done</string>
+    <string name="setup_permissions">Setup permissions in settings of the application</string>
+    <string name="cancel">Cancel</string>
+    <string name="profile_camera">Camera</string>
+    <string name="profile_gallery">Upload from gallery</string>
+
+    <string name="parent_registration_error_message">Check your email and code</string>
+    <string name="dialog_warning_title">Warning</string>
+    <string name="dialog_new_code_text">Password reset code has been sent to your email"</string>
+
+    <!--Weekly Calendar View-->
+    <string name="weekly_calendar_view_monday">Mo</string>
+    <string name="weekly_calendar_view_tuesday">Tu</string>
+    <string name="weekly_calendar_view_wednesday">We</string>
+    <string name="weekly_calendar_view_thursday">Th</string>
+    <string name="weekly_calendar_view_friday">Fr</string>
+    <string name="weekly_calendar_view_saturday">Sa</string>
+    <string name="weekly_calendar_view_sunday">Su</string>
+
+    <!--MENU-->
+    <string name="edit_child_menu">Edit</string>
+    <string name="delete_child_menu">Delete</string>
+    <string name="regex_phone_error">Check your phone</string>
+    <string name="regex_email_error">Check your email</string>
+
+    <!--Events-->
+    <string name="events_item_view_please_doc">Please check the new doc</string>
+    <string name="events_item_view_button_doc">Open document</string>
+    <string name="events_items_button_doc_format">Open document %1$s</string>
+
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="fab_show_hide_behavior">com.ltst.core.util.ScrollingFABBehavior</string>
+    <string name="events_empty_list_text">To create an event, click on the icon +</string>
+
+    <!--Forgot Screen-->
+    <string name="forgot_button">Reset the password</string>
+    <string name="forgot_email_not_exist">Email does not exist</string>
+
+    <!--Registration-->
+    <string name="enter_code_validation_error">Code must be six digits</string>
+    <string name="enter_exist_mail_error">Email already exists</string>
+    <string name="enter_email_error">Check your email address</string>
+    <string name="enter_email_server_valid_error">Email is invalid</string>
+    <!--поправила-->
+    <string name="enter_password_error">The password has to be at least 8 symbols long and contain both uppercase, lowercase letters and numbers</string>
+    <string name="enter_confirm_error">Password does not match the confirm password</string>
+
+    <!--Select person-->
+    <string name="select_person_title">Select person</string>
+    <string name="select_person_your_group">Your group.</string>
+    <string name="select_person_group_default">Your group</string>
+
+    <!--Feed-->
+    <string name="feed_empty_text_1">Find activities here\nSearch activities by using _</string>
+    <string name="feed_empty_text_2"> \nCheck activities using _</string>
+    <string name="feed_add_new_activity">Add news and activity</string>
+    <string name="daily_report">The daily report</string>
+
+
+    <!--Menu-->
+    <string name="feed_menu_calendar">Calendar</string>
+    <string name="feed_menu_search">Search</string>
+    <string name="children_menu_search_title">Search parentChild</string>
+    <string name="children_menu_plus_title">Add parentChild</string>
+    <string name="profile_menu_edit">Edit Profile</string>
+    <string name="profile_menu_settings">Settings</string>
+    <string name="dialog_logout_from_server">Please try to login again or contact your school admin</string>
+
+    <!--View parentChild -->
+    <string name="view_child_birth_date_format">Date of Birth: %1$d/%2$d/%3$d</string>
+    <!--поправила-->
+    <string name="view_child_missed">Information is not provided</string>
+    <string name="view_child_blood_group_format">Blood Group: %1$s</string>
+    <string name="view_child_genotype_format">Genotype: %1$s</string>
+    <string name="view_child_allergies_format">Allergies: %1$s</string>
+    <string name="view_child_additional_format">Additional Information: %1$s</string>
+
+    <!--Check In-->
+    <string name="checks_title">Check In</string>
+
+    <!--поправила-->
+    <string name="checks_dated_empty_text">There was no check-in/check-out for this day </string>
+    <string name="checks_arrow_text">Check</string>
+
+    <!--New Password Screen-->
+    <string name="new_pass_button_text">Update the password</string>
+    <string name="new_pass_email_regex_error">Check your email</string>
+    <string name="new_pass_email_not_exist">Email does not exist</string>
+    <!--поправила-->
+    <string name="new_pass_wrong_code_field">Wrong code, please try again</string>
+
+    <!--Add Child screen-->
+    <string name="add_child_title">Create Child</string>
+    <string name="edit_child_title">Edit Child</string>
+    <string name="add_child_gender">Gender*</string>
+    <string name="add_child_group">Group*</string>
+    <string name="add_child_boy">Boy</string>
+    <string name="add_child_girl">Girl</string>
+    <string name="add_child_birthday">Date of Birth*</string>
+    <string name="add_child_medical_info">Medical information</string>
+
+    <!--Edit Child Screen-->
+    <string name="dialog_camera_permissions_warning">Application needs camera permission to write external storage permission for this action</string>
+    <string name="dialog_storage_permission_warning">Application needs to write external storage permission for this action</string>
+    <string name="dialog_default_permission_warning">Application needs to write external storage and camera permissions for current work</string>
+    <string name="children_viewholder_not_provided">Not provided</string>
+
+    <!--Checks screen-->
+    <string name="checks_dropped_of_format">Dropped off by %1$s</string>
+    <string name="checks_picked_by_format">Picked up by %1$s</string>
+
+    <!--Checks select parentChild-->
+    <string name="checks_select_child_text">Choose a Child</string>
+    <string name="checks_select_child_button">Next</string>
+    <string name="checks_select_group_text">Choose the group</string>
+    <string name="checks_select_group_one_group">Choose the child</string>
+
+    <!--Simple Photo Fragment-->
+    <string name="photo_saved_to_gallery">Photo was added to gallery</string>
+
+    <!--Logout-->
+    <string name="logout">Logout</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want logout from app?</string>
+
+    <!--chats screen-->
+    <string name="chats_title">Chats</string>
+    <string name="chats_delete_chat_warning_title">@string/dialog_warning_title</string>
+    <string name="chats_delete_chat_message">Delete chat?</string>
+
+    <!--Conversation screen-->
+    <string name="title_select_conversation">New Message</string>
+    <string name="attachment_menu_camera">Camera</string>
+    <string name="attachment_menu_gallery">Gallery</string>
+    <string name="attachment_menu_location">Location</string>
+
+    <!--Check Email Screen-->
+    <string name="check_email_title">Check email</string>
+    <string name="check_email_text">Enter email for blablabla</string>
+    <string name="check_email_hint">Email</string>
+    <string name="check_email_button">done</string>
+    <string name="check_email_text_format" formatted="false">
+Please enter the email of the person you would like to add to the family of %1$s %2$s</string>
+    <string name="check_email_exist_error">The child has the relative with this email</string>
+
+    <!--New Message Screen-->
+    <string name="new_message_title">New message</string>
+    <string name="new_message_fake_name">Create a group chat</string>
+    <string name="feed_menu_events">Events</string>
+
+
+</resources>

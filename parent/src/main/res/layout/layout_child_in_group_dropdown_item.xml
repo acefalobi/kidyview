@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="horizontal"
+              android:paddingBottom="7dp"
+              android:paddingTop="7dp">
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_14"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.ltst.core.util.ForegroundImageView
+            android:id="@+id/spinner_item_group_icon"
+            android:layout_width="@dimen/spinner_dropdown_avatar_size"
+            android:layout_height="@dimen/spinner_dropdown_avatar_size"
+            android:layout_marginRight="@dimen/activity_horizontal_margin_4"
+            />
+
+        <com.ltst.core.util.ForegroundImageView
+            android:id="@+id/spinner_item_child_avatar_icon"
+            android:layout_width="@dimen/spinner_dropdown_avatar_size"
+            android:layout_height="@dimen/spinner_dropdown_avatar_size"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_14"
+            />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/spinner_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/activity_horizontal_margin_4"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_16sp"/>
+
+</LinearLayout>

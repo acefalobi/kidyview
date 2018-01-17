@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/add_event_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="64dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_32"
+                android:layout_marginTop="@dimen/activity_vertical_margin_32"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/add_event_date_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/add_event_date_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:text="Fri,Okt 10 2016"
+                            android:textColor="@color/bluish_grey"
+                            android:textSize="@dimen/text_18sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:src="@drawable/ic_arrow_drop_down_green"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/activity_vertical_margin_8"
+                        android:background="@color/separator_grey"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/add_event_time_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin_32"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/add_event_time_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:text="00:00"
+                            android:textColor="@color/bluish_grey"
+                            android:textSize="@dimen/text_18sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin_4"
+                            android:src="@drawable/ic_arrow_drop_down_green"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/activity_vertical_margin_8"
+                        android:background="@color/separator_grey"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/add_event_date_and_time_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/activity_horizontal_margin_16"-->
+                <!--android:textColor="@color/dark_grey_blue"-->
+                <!--android:textSize="@dimen/text_20sp"-->
+                <!--android:visibility="gone"/>-->
+
+            <EditText
+                android:id="@+id/add_event_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="@android:color/black"
+                android:layout_margin="@dimen/activity_horizontal_margin_16"
+                android:inputType="textMultiLine"
+                android:minLines="4"/>
+
+            <ImageView
+                android:id="@+id/add_event_image"
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_16"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_16"
+                android:foreground="@drawable/photo_foreground"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/add_event_file_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin_16"
+                android:background="@drawable/bluegray_background"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/add_event_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:lines="1"
+                    android:ellipsize="middle"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_4"
+                    android:layout_marginTop="@dimen/activity_vertical_margin_4"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin_8"
+                    android:layout_marginRight="@dimen/activity_vertical_margin_8"
+                    android:drawableLeft="@drawable/ic_doc"
+                    android:drawablePadding="@dimen/activity_vertical_margin_8"
+                    android:drawableRight="@drawable/ic_clear_white_24dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_white"
+        android:clickable="true"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/add_event_camera"
+        style="@style/AddEventBottomButton"
+        android:text="@string/add_event_photo"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/add_event_pick_file"
+        style="@style/AddEventBottomButton"
+        android:layout_toRightOf="@+id/add_event_camera"
+        android:drawableLeft="@drawable/ic_attach"
+        android:text="@string/add_event_file"/>
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+        <!--android:id="@+id/add_event_pick_date_and_time"-->
+        <!--style="@style/AddEventBottomButton"-->
+        <!--android:layout_toRightOf="@+id/add_event_pick_file"-->
+        <!--android:drawableLeft="@drawable/ic_calendar_white"-->
+        <!--android:text="@string/add_event_date"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/profile_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+
+        android:orientation="vertical">
+
+        <com.ltst.core.ui.AvatarView
+            android:id="@+id/profile_avatar_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_vertical_margin_32"
+            app:show_under_avatar="false"/>
+
+        <TextView
+            android:id="@+id/profile_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin_10"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_24sp"/>
+
+        <TextView
+            android:id="@+id/profile_personal_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin_20"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_16sp"/>
+
+        <TextView
+            android:id="@+id/profile_phones_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_50"
+            android:layout_marginTop="@dimen/activity_vertical_margin_10"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_16sp"/>
+
+    </LinearLayout>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_school_info_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_school"
+        app:main_text="@string/profile_school_info"
+        app:right_arrow="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator_grey"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/profile_events_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:left_icon="@drawable/ic_events"
+        app:main_text="@string/event_title"
+        app:right_arrow="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator_grey"/>
+
+
+</LinearLayout>

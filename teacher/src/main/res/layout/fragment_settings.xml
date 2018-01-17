@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/HorizontalDivider.WhiteTwo"
+            android:layout_marginTop="@dimen/activity_vertical_margin_16"/>
+
+        <FrameLayout
+            android:id="@+id/settings_edit_name_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:paddingLeft="@dimen/activity_vertical_margin_16"
+            android:paddingRight="@dimen/activity_vertical_margin_16"
+            >
+
+            <TextView
+                style="@style/SettingsText"
+                android:text="@string/settings_edit_groups"/>
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right|center_vertical"-->
+            <!--android:src="@drawable/ic_chevron_right_black_24dp"-->
+            <!--android:tint="@color/lightish_blue"/>-->
+
+        </FrameLayout>
+
+        <!--<View style="@style/HorizontalDivider.WhiteTwo"/>-->
+
+        <LinearLayout
+            android:id="@+id/settings_group_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_vertical_margin_16"
+            android:paddingRight="@dimen/activity_vertical_margin_16">
+
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalDivider.WhiteTwo"
+            />
+
+        <FrameLayout
+            android:id="@+id/settings_change_password"
+            style="@style/SettingsContainer">
+
+            <TextView
+                style="@style/SettingsText"
+                android:text="@string/settings_change_password"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:tint="@color/lightish_blue"/>
+        </FrameLayout>
+
+        <View style="@style/HorizontalDivider.WhiteTwo"/>
+
+        <FrameLayout
+            android:id="@+id/settings_log_out"
+            style="@style/SettingsContainer">
+
+            <TextView
+                style="@style/SettingsText"
+                android:text="@string/settings_log_out"
+                android:textColor="@color/apple_green"/>
+        </FrameLayout>
+
+        <View style="@style/HorizontalDivider.WhiteTwo"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Kidy View</string>
+
+    <!--Start Screen-->
+    <string name="start_screen_welcome_text">KidyView helps parents, schools and teachers stay connected all day. It\'s an easy way to follow the progress of your precious little ones.\n\nIf this is your first time, please use the school code sent to you to register. If you are an existing user, simply log on with your details.</string>
+    <string name="start_screen_registration_button">Registration</string>
+    <string name="start_screen_or">or</string>
+    <string name="start_screen_login_button">Login</string>
+
+    <!--Login Screen-->
+    <string name="login_login_button">Login</string>
+    <string name="login_forgot_password">Forgot your password?</string>
+
+    <!--Registration Screen-->
+    <string name="code_send_again">Send the code again</string>
+    <string name="code_if_need_code">If you need a new code</string>
+    <string name="code_login">Login</string>
+    <string name="code_send_again_logged_in_user">User with this email address is already registered or we have no invite for this email. Check your email address or contact your school teacher</string>
+    <string name="code_send_again_success">We sent you registration code again. Please, check your email</string>
+
+    <!--Profile Screen-->
+    <string name="profile_title">Profile</string>
+    <string name="profile_first_start_title">Parent profile</string>
+    <string name="edit_profile_school_info">School Information</string>
+    <string name="profile_header_school">School</string>
+    <string name="profile_header_family_request">Family Request</string>
+    <string name="profile_header_subscription">Subscription</string>
+    <string name="parent_profile_family_count_format">Family count (%d person)</string>
+    <string name="parent_profile_child_missed">Missed</string>
+
+    <!--View Child Screen-->
+    <string name="view_child_title">Child</string>
+    <string name="child_boy">Boy</string>
+    <string name="child_girl">Girl</string>
+    <string name="view_child_age_and_gender_format">%1$s %2$d year old</string>
+
+    <string name="view_child_empty_blood_group">Blood group is missing</string>
+    <string name="view_child_empty_genotype">Genotype is missing</string>
+    <string name="view_child_empty_allergies">Allergies are missing</string>
+    <string name="view_child_empty_additional">Information is missing</string>
+    <string name="view_child_send_request">Send request</string>
+
+    <!--Edit Profile-->
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="phone_not_valid">Check your phone number</string>
+    <!--Edit Child-->
+    <string name="edit_child_title">Edit child</string>
+
+    <!--Checks screen-->
+    <string name="checks_screen_title">Attendance</string>
+    <!--поправила-->
+    <string name="checks_empty_screen_text">Follow your kids attendance here …</string>
+
+    <!--Info Checkout title-->
+    <string name="info_checkout_title">Checkout</string>
+    <string name="info_checkout_name_filed_hint">Select the Child</string>
+    <string name="info_checkout_time_hint">Time</string>
+    <string name="info_checkout_next">Next</string>
+    <string name="view_child_birth_date_format">Date of Birth: %1$d/%2$d/%3$d</string>
+    <string name="info_checkout_header_text">You can create the checkout code only in those schools where you have the full level access</string>
+    <string name="info_checkout_no_children">No children to generate checkout request</string>
+
+    <!--Checks Screen-->
+    <string name="checks_empty_text_parent">In this section, you need to verify Check in code with
+        the person who picks up the Child before the Child is released</string>
+
+
+    <!--Share Code Screen-->
+    <string name="share_code_header_format">%1$s %2$s %3$s will pick up %4$s at %5$s</string>
+    <string name="share_code_code">Code</string>
+    <string name="share_code_share">share</string>
+    <!--<string name="share_code_text_format">Please see the %1$s check-out code. You should give this code to the teacher or school admin to pick the parentChild. %2$s</string>-->
+    <string name="share_code_text_format">Please see below the Check out code for %1$s from %2$s. Give this code to the Teacher or Admin to pick up the child %3$s</string>
+    <string name="add_member_title">Add family</string>
+
+    <!--Select school Screen-->
+    <string name="select_school_header">Select Child and group</string>
+
+    <!--Events Screen-->
+    <string name="empty_event_message">Find School and Group Events here</string>
+
+    <!--Report Screen-->
+    <string name="report_title">The daily report</string>
+    <string name="report_header_name_format">%1$s`s day</string>
+    <string name="report_highlight_of">Highlight of</string>
+
+    <!--InfoSchool Info Screen-->
+    <string name="school_info_title">School</string>
+    <string name="teacher">Teacher</string>
+    <string name="school">School</string>
+
+    <!--School Info Item Screen-->
+    <string name="item_info_school_address">School Address</string>
+    <string name="item_info_school_phone">School Phone Number</string>
+    <string name="item_info_school_email">School E-mail</string>
+    <string name="item_info_personal_phone">Personal Phone</string>
+    <string name="item_info_personal_email">Personal E-mail</string>
+    <string name="item_ifo_additional_phone">Additional Phone</string>
+
+    <!--FireBase Notification-->
+    <string name="notification_check_in_title">Attendance</string>
+    <string name="notification_check_in_content_format">%1$s dropped of by %2$s</string>
+    <string name="notification_check_in_default_content">Attendance record</string>
+
+    <string name="notification_checkout_title">Attendance</string>
+    <string name="notification_checkout_format">%1$s picked up by %2$s</string>
+    <string name="notification_checkout_default_content">Attendance record</string>
+
+
+</resources>

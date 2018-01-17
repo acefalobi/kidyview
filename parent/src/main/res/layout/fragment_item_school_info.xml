@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/viewholder_school_info"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/item_school_info_location_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_18"
+        app:left_icon="@drawable/ic_location"
+        app:secondary_text=""/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/item_school_info_phone_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_32"
+        android:background="?selectableItemBackground"
+        app:left_icon="@drawable/ic_phone"/>
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/item_school_info_additional_phone_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_32"
+        android:background="?selectableItemBackground"
+        />
+
+    <com.ltst.core.ui.TwoLineTextViewWithIcon
+        android:id="@+id/item_school_info_email_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_32"
+        android:background="?selectableItemBackground"
+        app:left_icon="@drawable/ic_mail"/>
+
+
+</LinearLayout>

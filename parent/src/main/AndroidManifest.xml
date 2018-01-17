@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ltst.schoolapp">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- LayerClient.sendLogs() permissions -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <!-- Signature-only permissions -->
+    <permission
+        android:name="com.ltst.schoolapp.parent.permission.LAYER_PUSH"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.ltst.schoolapp.parent.permission.LAYER_PUSH"/>
+
+    <application
+        android:name=".parent.ParentApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".parent.ui.enter.EnterActivity"
+            android:theme="@style/AppTheme.EnterTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".parent.ui.main.MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".parent.ui.child.ChildActivity"/>
+        <activity android:name=".parent.ui.edit.profile.EditProfileActivity"/>
+        <activity android:name=".parent.ui.child.edit.EditChildActivity"/>
+        <activity
+            android:name=".parent.ui.checkout.CheckoutActivity"
+            android:theme="@style/GreenTheme"/>
+        <activity android:name=".parent.ui.dated.checks.DatedCheckActivity"/>
+        <activity
+            android:name=".parent.ui.checkout.select.child.ChecksSelectChildActivity"
+            android:theme="@style/GreenTheme"/>
+        <activity android:name=".parent.ui.dated.feed.DatedFeedActivity"/>
+        <activity
+            android:name=".parent.ui.family.add.AddMemberActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".parent.ui.checkout.select.school.SelectChildInSchoolActivity"
+            android:theme="@style/GreenTheme"/>
+        <activity android:name=".parent.ui.report.ReportActivity"/>
+        <activity android:name=".parent.ui.conversation.ConversationActivity"/>
+        <activity android:name=".parent.ui.school.info.SchoolActivity"/>
+        <activity
+            android:name=".parent.ui.select.dialog.SelectDialogMemberActivity"
+            android:theme="@style/AppTheme.SelectPersonForDialogTheme"/>
+        <activity android:name=".parent.ui.school.item.SchoolItemActivity"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cee41ec1b82a8d52a74d0691bb17056d0f38cb8f"/>
+
+        <receiver
+            android:name=".parent.receviers.LayerPushReceiver"
+            android:permission="${applicationId}.permission.LAYER_PUSH">
+
+            <intent-filter>
+                <action android:name="com.layer.sdk.PUSH"/>
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="${applicationId}.CANCEL_PUSH"/>
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+
+        </receiver>
+
+
+        <service
+            android:name=".parent.firebase.message.ParentFireBaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".parent.firebase.token.RefreshFirebaseTokenService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <!-- Provider: FileProvider for CameraSender -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>

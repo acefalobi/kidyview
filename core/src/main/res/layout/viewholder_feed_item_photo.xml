@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="192dp">
+
+            <ImageView
+                android:id="@+id/feed_item_photo_first"
+                android:foreground="?selectableItemBackground"
+                android:src="@android:color/darker_gray"/>
+
+            <ImageView
+                android:id="@+id/feed_item_photo_second"
+                android:foreground="?selectableItemBackground"
+                android:src="@android:color/darker_gray"/>
+
+            <ImageView
+                android:id="@+id/feed_item_photo_third"
+                android:foreground="?selectableItemBackground"
+                android:src="@android:color/darker_gray"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+
+        <TextView
+            android:id="@+id/feed_item_photo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin_16"
+            android:text="Group excursion to the Zoo. It was really cool. Everybody liked the elephants"
+            android:textColor="@color/dark_grey_blue"/>
+
+    </LinearLayout>
+
+</merge>

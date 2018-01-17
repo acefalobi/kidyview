@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:atlas="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/chats_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+
+    <com.layer.atlas.AtlasConversationsRecyclerView
+        android:id="@+id/conversations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        atlas:cellSubtitleTextColor="@color/bluish_grey"
+        atlas:cellTitleTextColor="@android:color/black"
+        atlas:dateTextColor="@color/bluish_grey"
+        />
+
+
+</LinearLayout>

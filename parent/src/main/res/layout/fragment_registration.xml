@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/activity_vertical_margin_16"
+        android:orientation="vertical"
+        android:rotation="180">
+
+        <!--<Button-->
+            <!--android:id="@+id/code_generate_code"-->
+            <!--style="@style/DefaultButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:rotation="180"-->
+            <!--android:text="@string/code_send_again"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:rotation="180"-->
+            <!--android:text="@string/code_if_need_code"-->
+            <!--android:textSize="@dimen/text_14sp"/>-->
+
+        <Button
+            android:id="@+id/code_login"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:rotation="180"
+            android:text="@string/code_login"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <!--</LinearLayout>-->
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/code_code_field"
+            style="@style/EditTextStyle.Inverse.Code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:imeOptions="actionDone"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/code_confirm_password_field"
+            style="@style/EditTextStyle.Inverse.ConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/code_code_field"
+            android:rotation="180"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/code_password_field"
+            style="@style/EditTextStyle.Inverse.Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@+id/code_confirm_password_field"
+            android:imeOptions="actionNext"
+            android:rotation="180"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/code_email_field"
+            style="@style/EditTextStyle.Inverse.Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/code_password_field"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_24"
+            android:rotation="180">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/app_logo"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/registration_progress_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+</FrameLayout>

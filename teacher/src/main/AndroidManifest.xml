@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ltst.schoolapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Signature-only permissions -->
+    <permission
+        android:name="com.ltst.schoolapp.permission.LAYER_PUSH"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.ltst.schoolapp.permission.LAYER_PUSH" />
+    <!--<permission android:name="com.ltst.schoolapp.permission.C2D_MESSAGE"-->
+    <!--android:protectionLevel="signature"/>-->
+    <!--<uses-permission android:name="com.ltst.schoolapp.permission.C2D_MESSAGE"/>-->
+
+    <!-- LayerClient.sendLogs() permissions -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+
+    <application
+        android:name=".TeacherApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".teacher.ui.enter.EnterActivity"
+            android:theme="@style/AppTheme.EnterTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".teacher.ui.main.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".teacher.ui.editprofile.EditProfileActivity" />
+        <activity android:name=".teacher.ui.settings.settings.SettingsActivity" />
+        <activity android:name=".teacher.ui.settings.editgroup.EditGroupActivity" />
+        <activity android:name=".teacher.ui.addchild.AddChildActivity" />
+        <activity
+            android:name=".teacher.ui.child.ChildActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".teacher.ui.settings.changepassword.ChangePasswordActivity" />
+        <activity android:name=".teacher.ui.activities.dated.feed.DatedFeedActivity" />
+        <activity android:name=".teacher.ui.events.add.AddEventActivity" />
+        <activity
+            android:name=".teacher.ui.activities.add.AddPostActivity"
+            android:theme="@style/GreenTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".teacher.ui.activities.select.person.SelectPersonActivity"
+            android:theme="@style/GreenTheme" />
+        <activity
+            android:name=".teacher.ui.checks.check.the.code.CheckTheCodeActivity"
+            android:theme="@style/GreenTheme" />
+        <activity
+            android:name=".teacher.ui.checks.code.ChecksCodeActivity"
+            android:theme="@style/GreenTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".teacher.ui.checks.select.child.ChecksSelectChildActivity"
+            android:theme="@style/GreenTheme" />
+        <activity
+            android:name=".teacher.ui.checks.select.family.member.ChecksSelectMemberActivity"
+            android:theme="@style/GreenTheme" />
+        <activity
+            android:name=".teacher.ui.checks.single.check.SingleCheckActivity"
+            android:theme="@style/GreenTheme.GreenButtons" />
+        <activity
+            android:name=".teacher.ui.checks.other.ChecksOtherActivity"
+            android:theme="@style/GreenTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".teacher.ui.checks.dated.DatedCheckActivity" />
+        <activity android:name=".teacher.ui.events.calendar.CalendarActivity" />
+        <activity android:name=".teacher.ui.school.SchoolActivity" />
+        <activity android:name=".teacher.ui.conversation.ConversationActivity" />
+        <activity
+            android:name=".teacher.ui.select.dialog.SelectDialogMemberActivity"
+            android:theme="@style/AppTheme.SelectPersonForDialogTheme" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cee41ec1b82a8d52a74d0691bb17056d0f38cb8f" />
+
+        <receiver android:name=".teacher.receivers.LayerPushReceiver">
+            <intent-filter>
+                <action android:name="com.layer.sdk.PUSH" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <intent-filter>
+            <action android:name="${applicationId}.CANCEL_PUSH" />
+            <category android:name="${applicationId}" />
+        </intent-filter>
+
+        <!--<service-->
+        <!--android:name="com.layer.sdk.services.LayerFcmService"-->
+        <!--android:exported="false">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!--<service-->
+        <!--android:name="com.layer.sdk.services.LayerFcmInstanceIdService"-->
+        <!--android:exported="false">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+        <service android:name=".teacher.firebase.message.TeacherFireBaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".teacher.firebase.token.RefreshFirebaseTokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Provider: FileProvider for CameraSender -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
