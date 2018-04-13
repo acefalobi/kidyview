@@ -133,8 +133,6 @@ public class FeedFragment extends CoreFragment implements FeedContract.View {
 //        toolbarSpinner.setVisibility(View.VISIBLE);
         searchMenuItem = toolbar.getMenu().findItem(R.id.feed_menu_search);
         toolbarSearch = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
-        MenuItem eventsMenuItem = toolbar.getMenu().findItem(R.id.feed_menu_events);
-        eventsMenuItem.setVisible(false);
     }
 
 

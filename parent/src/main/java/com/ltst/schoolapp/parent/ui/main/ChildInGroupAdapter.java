@@ -41,7 +41,8 @@ public class ChildInGroupAdapter extends BaseAdapter implements SpinnerAdapter {
     }
 
     @Override public long getItemId(int position) {
-        return childrenInGroups.get(position).getChildId();
+        if (position < childrenInGroups.size()) return childrenInGroups.get(position).getChildId();
+        return 0;
     }
 
     @Override public View getView(int position, View convertView, ViewGroup parent) {

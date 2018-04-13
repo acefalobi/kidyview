@@ -24,8 +24,8 @@ import timber.log.Timber;
 @Module
 public class NetworkModule {
 
-//    private static final String SERVER_URL = "http://95.213.203.129"; //test server
-    private static final String SERVER_URL = "https://kidyview.com"; //release server
+    private static final String SERVER_URL = "http://kiddyview.herokuapp.com"; //test server
+//    private static final String SERVER_URL = "https://kidyview.com"; //release server
     public static final String API_URL = SERVER_URL + "/api/mobile/v1/";
     public static final String ACTICITY_ICONS_PATH = SERVER_URL + "/icons/";
 

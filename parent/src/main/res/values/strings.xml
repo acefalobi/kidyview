@@ -99,7 +99,7 @@
 
     <!--FireBase Notification-->
     <string name="notification_check_in_title">Attendance</string>
-    <string name="notification_check_in_content_format">%1$s dropped of by %2$s</string>
+    <string name="notification_check_in_content_format">%1$s dropped off by %2$s</string>
     <string name="notification_check_in_default_content">Attendance record</string>
 
     <string name="notification_checkout_title">Attendance</string>

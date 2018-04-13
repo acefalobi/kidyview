@@ -12,6 +12,7 @@ import co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView;
 public interface ChecksContract {
 
     interface Presenter extends BasePresenter {
+
         void openSortChecksCalendar();
 
         void goBack();
@@ -23,7 +24,7 @@ public interface ChecksContract {
 
         void showLoading();
 
-        void showEmpty(boolean fromDatetChecks);
+        void showEmpty(boolean fromDateChecks);
 
         void bindListeners(android.view.View.OnClickListener onFabClick,
                            Toolbar.OnMenuItemClickListener onMenuItemClick,
@@ -36,6 +37,6 @@ public interface ChecksContract {
 
         void enableLoadMore(boolean isEnabled);
 
-        void bindAdapter(ChecksAdapter checksAdapter);
+        void bindAdapter(ChecksAdapter checksAdapter, int checkedIn);
     }
 }

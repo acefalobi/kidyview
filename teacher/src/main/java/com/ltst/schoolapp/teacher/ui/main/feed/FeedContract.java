@@ -26,6 +26,7 @@ public interface FeedContract {
                       SearchView.OnQueryTextListener searchListener,
                       Action1<Void> onCollapseSearch,
                       android.view.View.OnClickListener onFabClickListener,
+                      android.view.View.OnClickListener onFabEventsClickListener,
                       Action1<Integer> onLoadMore);
 
 //        void initSpinner(SpinnerAdapter spinnerAdapter, AdapterView.OnItemSelectedListener selectedListener);

@@ -9,8 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.livetyping.utils.utils.StringUtils;
+import com.ltst.core.data.model.ChildStateType;
 import com.ltst.core.data.model.Group;
 import com.ltst.core.data.realm.model.ChildCheckScheme;
+import com.ltst.core.data.realm.model.ChildStateScheme;
 import com.ltst.core.navigation.ActivityScreenSwitcher;
 import com.ltst.core.navigation.FragmentScreenSwitcher;
 import com.ltst.core.ui.adapter.ChecksAdapter;
@@ -62,12 +64,12 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
 
 
     @Inject
-    public ChecksPresenter(ChecksContract.View view,
-                           ActivityScreenSwitcher activitySwitcher,
-                           TeacherApplication application,
-                           DataService dataService,
-                           FragmentScreenSwitcher fragmentSwitcher,
-                           Bundle datedChecksScreenParams, ChangeGroupHelper changeGroupHelper) {
+    ChecksPresenter(ChecksContract.View view,
+                    ActivityScreenSwitcher activitySwitcher,
+                    TeacherApplication application,
+                    DataService dataService,
+                    FragmentScreenSwitcher fragmentSwitcher,
+                    Bundle datedChecksScreenParams, ChangeGroupHelper changeGroupHelper) {
         this.view = view;
         this.activitySwitcher = activitySwitcher;
         this.application = application;
@@ -109,8 +111,8 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
         changeGroupHelper.setGroupChangedListener(this);
         uploadNotSynced();
         if (fromDatedChecks) {
-            final String datePatern = "MMMM d yyyy";
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(datePatern);
+            final String datePattern = "MMMM d yyyy";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(datePattern);
             view.initDatedChecksToolbar(simpleDateFormat.format(startCalendar.getTime()), fromDatedChecks);
         }
     }
@@ -139,9 +141,7 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
         subscriptions.add(dataService.syncChecksIfNeeded()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(childChecks -> {
-                            loadItems();
-                        },
+                .subscribe(childChecks -> loadItems(),
                         throwable -> {
                             loadItems();
                             throwable.printStackTrace();
@@ -168,7 +168,7 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
             } else {
                 stringMonth = String.valueOf(month);
             }
-            String stringDay = null;
+            String stringDay;
             int day = startCalendar.get(Calendar.DAY_OF_MONTH);
             if (day < 10) {
                 stringDay = "0" + String.valueOf(day);
@@ -193,21 +193,66 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
                 .subscribe(group -> {
 //                    view.stopRefresh();
                     this.selectGroupTitle = group.getTitle();
-                    RealmResults<ChildCheckScheme> models;
+                    RealmResults<ChildCheckScheme> models, models_;
+                    int checkedIn = 0;
                     if (startCalendarDate != null) {
                         models = realm
                                 .where(ChildCheckScheme.class)
                                 .contains("datetime", startCalendarDate)
                                 .equalTo("groupId", group.getId())
                                 .findAllSorted("datetime", Sort.DESCENDING);
+
+
+                        for (ChildCheckScheme model : models) {
+                            for (ChildStateScheme childStateScheme : model.getChildStates()) {
+                                if (childStateScheme.getType().equals(ChildStateType.CHECKIN.toString())) {
+                                    checkedIn++;
+                                }
+                            }
+                        }
                     } else {
                         models = realm.where(ChildCheckScheme.class)
                                 .equalTo("groupId", group.getId())
                                 .findAllSorted("datetime", Sort.DESCENDING);
+                        StringBuilder startDate = new StringBuilder();
+                        Calendar calendar = Calendar.getInstance();
+                        int month = calendar.get(Calendar.MONTH) + 1;
+                        String stringMonth;
+                        if (month < 10) {
+                            stringMonth = "0" + String.valueOf(month);
+                        } else {
+                            stringMonth = String.valueOf(month);
+                        }
+                        String stringDay;
+                        int day = calendar.get(Calendar.DAY_OF_MONTH);
+                        if (day < 10) {
+                            stringDay = "0" + String.valueOf(day);
+                        } else {
+                            stringDay = String.valueOf(day);
+                        }
+                        startDate.append(calendar.get(Calendar.YEAR))
+                                .append(StringUtils.DASH)
+                                .append(stringMonth)
+                                .append(StringUtils.DASH)
+                                .append(stringDay)
+                                .append("T");
+                        models_ = realm
+                                .where(ChildCheckScheme.class)
+                                .contains("datetime", startDate.toString())
+                                .equalTo("groupId", group.getId())
+                                .findAllSorted("datetime", Sort.DESCENDING);
+
+                        for (ChildCheckScheme model : models_) {
+                            for (ChildStateScheme childStateScheme : model.getChildStates()) {
+                                if (childStateScheme.getType().equals(ChildStateType.CHECKIN.toString())) {
+                                    checkedIn++;
+                                }
+                            }
+                        }
                     }
                     if (models.size() > 0) view.showContent();
                     checksAdapter = new ChecksAdapter(application, models);
-                    view.bindAdapter(checksAdapter);
+                    view.bindAdapter(checksAdapter, checkedIn);
                 });
 
     }
@@ -288,9 +333,8 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     private void openCheckTheCodeScreen() {
-        dataService.getSelectedGroup().subscribe(group -> {
-            activitySwitcher.open(new CheckTheCodeActivity.Screen(group.getTitle()));
-        });
+        dataService.getSelectedGroup().subscribe(group ->
+                activitySwitcher.open(new CheckTheCodeActivity.Screen(group.getTitle())));
 
     }
 
@@ -315,7 +359,7 @@ public class ChecksPresenter implements ChecksContract.Presenter, Toolbar.OnMenu
 
     }
 
-    public static final String DATE_PICKER_TAG = "DatePicker";
+    private static final String DATE_PICKER_TAG = "DatePicker";
 
     @Override public void openSortChecksCalendar() {
         Calendar calendar = Calendar.getInstance();

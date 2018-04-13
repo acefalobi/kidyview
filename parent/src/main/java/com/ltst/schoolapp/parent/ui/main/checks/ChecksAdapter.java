@@ -23,9 +23,7 @@ public class ChecksAdapter extends RecyclerBindableAdapter<ChecksAdapter.ChecksW
         int size = getItems().size();
         if (position + 1 < size) {
             ChecksWrapper nextItem = getItem(position + 1);
-            if (StringUtils.isBlank(nextItem.getDate())) {
-                showBottomDivider = false;
-            } else showBottomDivider = true;
+            showBottomDivider = !StringUtils.isBlank(nextItem.getDate());
         } else showBottomDivider = true;
         viewHolder.bindView(position, getItem(position), showBottomDivider);
     }

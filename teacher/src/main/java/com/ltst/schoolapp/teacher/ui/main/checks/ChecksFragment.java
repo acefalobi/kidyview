@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +38,8 @@ public class ChecksFragment extends CoreFragment implements ChecksContract.View 
     RealmRecyclerView realmRecyclerView;
     @BindView(R.id.checks_swipe_to_refresh)
     SwipeRefreshLayout swipeRefresh;
+    @BindView(R.id.in_children_count)
+    TextView inChildrenCount;
     @BindView(R.id.checks_fab)
     FloatingActionButton fab;
     @Inject
@@ -113,9 +113,9 @@ public class ChecksFragment extends CoreFragment implements ChecksContract.View 
     }
 
     @Override
-    public void showEmpty(boolean fromDatedChecks) {
+    public void showEmpty(boolean fromDateChecks) {
         swipeRefresh.setRefreshing(false);
-        if (fromDatedChecks) {
+        if (fromDateChecks) {
             animator.setDisplayedChildId(R.id.checks_dated_empty);
         } else {
             animator.setDisplayedChildId(R.id.checks_empty);
@@ -165,8 +165,9 @@ public class ChecksFragment extends CoreFragment implements ChecksContract.View 
     }
 
     @Override
-    public void bindAdapter(ChecksAdapter checksAdapter) {
+    public void bindAdapter(ChecksAdapter checksAdapter, int checkedIn) {
         realmRecyclerView.setAdapter(checksAdapter);
+        inChildrenCount.setText(" " + String.valueOf(checkedIn));
     }
 
 

@@ -111,6 +111,10 @@
     <string name="add_post_select_person">Select person</string>
     <string name="add_post_photo">Photo</string>
     <string name="add_post_one_group_header">You need to select a child to create a new post</string>
+    <string-array name="add_post_food_types">
+        <item>School Provided</item>
+        <item>Home Provided</item>
+    </string-array>
 
 
     <!--Add Family Screen-->
@@ -161,6 +165,7 @@
 
     <!--School information-->
     <string name="school_info_title">School Information</string>
+    <string name="label_in_children">Children Present Today: </string>
 
 
 </resources>

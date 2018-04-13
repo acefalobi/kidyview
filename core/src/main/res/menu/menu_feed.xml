@@ -6,11 +6,6 @@
         android:icon="@drawable/ic_calendar_white"
         android:title="@string/feed_menu_calendar"
         app:showAsAction="always"/>
-    <item
-        android:id="@+id/feed_menu_events"
-        android:icon="@drawable/ic_event_bottom_white"
-        android:title="@string/feed_menu_events"
-        app:showAsAction="always"/>
 
     <item
         android:id="@+id/feed_menu_search"

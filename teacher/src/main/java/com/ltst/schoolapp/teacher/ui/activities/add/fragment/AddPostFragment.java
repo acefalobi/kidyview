@@ -16,11 +16,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.livetyping.utils.utils.StringUtils;
@@ -42,6 +46,8 @@ public class AddPostFragment extends CoreEnterFragment implements AddPostContrac
 
     public static final int SPAN_COUNT = 2;
 
+    private int selectedFoodType = 0;
+
     @Inject
     AddPostPresenter presenter;
     @Inject
@@ -52,6 +58,7 @@ public class AddPostFragment extends CoreEnterFragment implements AddPostContrac
     @BindView(R.id.select_person_text) TextView selectPersonText;
     @BindView(R.id.add_post_current_activity_image) ImageView currentActivityImage;
     @BindView(R.id.add_post_current_activity_text) TextView currentActivityText;
+    @BindView(R.id.add_post_food_type_spinner) Spinner foodTypeSpinner;
     @BindView(R.id.add_post_text) EditText content;
     @BindView(R.id.add_post_child_activity_header) TextView activitiesHeader;
     @BindView(R.id.add_post_recycler) RecyclerView childActivitiesRecycler;
@@ -122,6 +129,21 @@ public class AddPostFragment extends CoreEnterFragment implements AddPostContrac
         selectPersonContainer.setOnClickListener(onSelectPersonListener);
         childActivitiesRecycler.setAdapter(adapter);
         camera.setOnClickListener(onAddPhotoClick);
+        ArrayAdapter<CharSequence> foodTypeAdapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.add_post_food_types, android.R.layout.simple_spinner_item);
+        foodTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        foodTypeSpinner.setAdapter(foodTypeAdapter);
+        foodTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedFoodType = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                selectedFoodType = 0;
+            }
+        });
     }
 
     @Override
@@ -142,9 +164,15 @@ public class AddPostFragment extends CoreEnterFragment implements AddPostContrac
                 .thumbnail(0.5f)
                 .into(currentActivityImage);
         currentActivityText.setText(StringUtils.capitalize(currentChildActivity.getTitle()));
+        if (currentActivityText.getText().equals("Food")) {
+            foodTypeSpinner.setVisibility(View.VISIBLE);
+        } else {
+            foodTypeSpinner.setVisibility(View.GONE);
+        }
         content.requestFocus();
         /*show keyboard*/
         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        assert imm != null;
         imm.showSoftInput(content, InputMethodManager.SHOW_IMPLICIT);
     }
 
@@ -155,7 +183,13 @@ public class AddPostFragment extends CoreEnterFragment implements AddPostContrac
 
     @Override
     public String getContent() {
-        return content.getText().toString();
+        String foodType = getResources().getStringArray(R.array.add_post_food_types)[selectedFoodType];
+        if (currentActivityText.getText().equals("Food")) {
+            Toast.makeText(getContext(), foodType, Toast.LENGTH_SHORT).show();
+            return "(" + foodType + ") " + content.getText().toString();
+        } else {
+            return content.getText().toString();
+        }
     }
 
     @BindDimen(R.dimen.activity_horizontal_margin_16) int marginForFirstPhoto;

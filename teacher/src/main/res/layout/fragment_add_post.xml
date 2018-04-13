@@ -74,6 +74,13 @@
 
                 android:textSize="@dimen/text_14sp"/>
 
+            <Spinner
+                android:id="@+id/add_post_food_type_spinner"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
 

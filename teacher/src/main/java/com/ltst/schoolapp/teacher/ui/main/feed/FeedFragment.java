@@ -58,6 +58,8 @@ public class FeedFragment extends CoreFragment implements FeedContract.View {
     @BindView(R.id.feed_recycler)
     RecyclerView recyclerView;
 
+    @BindView(R.id.feed_fab_events)
+    FloatingActionButton fabEvents;
     @BindView(R.id.feed_fab)
     FloatingActionButton floatingActionButton;
 
@@ -161,6 +163,7 @@ public class FeedFragment extends CoreFragment implements FeedContract.View {
                          SearchView.OnQueryTextListener searchListener,
                          Action1<Void> onCollapseSearch,
                          View.OnClickListener onFabClickListener,
+                         View.OnClickListener onFabEventsClickListener,
                          Action1<Integer> onLoadMore) {
         RecyclerView.Adapter existAdapter = recyclerView.getAdapter();
         if (existAdapter == null || existAdapter !=adapter) {
@@ -169,6 +172,7 @@ public class FeedFragment extends CoreFragment implements FeedContract.View {
 
         swipeRefreshLayout.setOnRefreshListener(onRefreshListener);
         floatingActionButton.setOnClickListener(onFabClickListener);
+        fabEvents.setOnClickListener(onFabEventsClickListener);
         scrollListener = new EndlessRecyclerScrollListener(recyclerView.getLayoutManager()) {
             @Override
             protected void onLoadMore(int page, int totalItemsCount) {

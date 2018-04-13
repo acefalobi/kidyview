@@ -138,9 +138,8 @@ public class FeedPresenter extends SimpleItemSelectedListener implements FeedCon
         mainView.bindData(feedRecyclerAdapter,
                 this, this,
                 onSearchCollapse -> reloadData(),
-                fab -> {
-                    activitySwitcher.startForResult(new AddPostActivity.Screen(), ADD_POST_RC);
-                },
+                fab -> activitySwitcher.startForResult(new AddPostActivity.Screen(), ADD_POST_RC),
+                fab -> openEvents(),
                 onLoadMore());
         if (isMain) {
             if (changeGroupHelper.isGroupChecked() && feedRecyclerAdapter.getItemCount() == 0) {
@@ -187,9 +186,6 @@ public class FeedPresenter extends SimpleItemSelectedListener implements FeedCon
                 break;
             case R.id.feed_menu_calendar:
                 showCalendar();
-                break;
-            case R.id.feed_menu_events:
-                openEvents();
                 break;
         }
         return false;
